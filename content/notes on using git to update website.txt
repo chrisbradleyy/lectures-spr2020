@@ -1,0 +1,47 @@
+*Open Anaconda PowerPrompt*
+
+* to create the jupyter book, its files, and then "build" the website files*
+
+pip install jupyter-book
+cd "C:\Users\DonsLaptop\Dropbox\Teaching\lehigh\FIN377 Advanced Topics Data Analytics for Finance\jupytertemplate"
+jupyter-book create website-lectures --demo
+jupyter-book build new-lectures
+
+**** to update the site ****
+
+conda install git
+
+* clone existing repo*
+
+cd C:\Users\DoLe   # can put wherever
+git clone https://github.com/LeDataSciFi/website-lectures
+
+* overwrite that clone by copying local website into that clone's local dir *
+
+cd "C:\Users\DonsLaptop\Dropbox\Teaching\lehigh\FIN377 Advanced Topics Data Analytics for Finance\jupytertemplate"
+cp -r _build/* "C:\Users\DonsLaptop\Dropbox\Teaching\lehigh\FIN377 Advanced Topics Data Analytics for Finance\website-dev2\new-lectures"
+
+* so git and github can talk *
+
+git config --global user.name "LeDataSciFi"
+git config --global user.email deb219@lehigh.edu
+git config --global --list
+
+* push to repo online *
+
+cd C:\Users\DoLe\website-lectures
+git add ./*
+git commit -m "adding my first book!"
+git push
+donbowen (username)
+type in password
+
+* publish *
+
+<go onto repo and settings and have pages pull from master>
+
+
+
+
+cd "C:\Users\DonsLaptop\Dropbox\Teaching\lehigh\FIN377 Advanced Topics Data Analytics for Finance\website-lectures\"
+ghp-import -n -p -f _build
