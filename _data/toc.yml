@@ -22,7 +22,8 @@
 
 - header: "Getting Started"  
   sections:
-  - url: "/01/01_Motivation_and_Getting_Started"
+  - url: "/01/01_Motivation_and_Getting_Started" 
+    title: "Motivation and Getting_Started"
     not_numbered: true
   - url: "/01/02_Jupyter_Basics"
     not_numbered: true
