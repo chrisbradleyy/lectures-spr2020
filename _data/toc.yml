@@ -20,20 +20,15 @@
 - url: /intro
   not_numbered: true
 
-- header: "Getting Started"  
+- title: "Motivation and Getting_Started"
+  url: "/01/00_Getting_Started"
+  not_numbered: true  
   sections:
-  - url: "/01/01_Motivation_and_Getting_Started" 
-    title: "Motivation and Getting_Started"
-    not_numbered: true
-  - url: "/01/02_Jupyter_Basics"
-    not_numbered: true
+  - title: "Motivation and Getting_Started"
+    url: "/01/01_Motivation_and_Getting_Started"     
+  - title: "Jupyter Basics"
+    url: "/01/02_Jupyter_Basics"
   
-- url: "/01/00_Getting_Started"
-  sections:
-  - url: "/01/01_Motivation_and_Getting_Started"
-    not_numbered: true
-  - url: "/01/02_Jupyter_Basics"
-    not_numbered: true
 #    subsections:
 #    - url: /01/3/subsection/subsections
 #    - url: /01/3/subsection/subsectiontwo
