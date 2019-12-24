@@ -20,7 +20,7 @@
 aside.sidebar__right {
     // Positioning
     overflow-x: hidden;
-    background-color: $book-background-color;
+    background-color: #502d0e; // was $book-background-color;
     overflow-y: auto;
     max-height: 90vh; // Required for scrolling to work properly
     scrollbar-width: thin;
@@ -29,7 +29,7 @@ aside.sidebar__right {
     // Font and look
     font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI',
         'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;
-    color: #7a8288;
+    color: #ffffff; // was #7a8288
     border-left: 1px solid #c3c3c3;
     text-transform: uppercase;
     letter-spacing: 1px;
