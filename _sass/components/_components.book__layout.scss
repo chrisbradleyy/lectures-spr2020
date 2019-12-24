@@ -106,6 +106,7 @@ $topbar-height: 60px;
 }
 
 .js-show-sidebar {
+	// this is about  when we show the LEFT SIDEBAR
   .c-textbook__page, .c-topbar {
     /* [4] */
     transform: translate($left-sidebar-width, 0);
@@ -117,8 +118,8 @@ $topbar-height: 60px;
   }
   .c-textbook__sidebar {
  	background-color: #502d0e; // newly added 
-}
-
+	color: #ffffff; // was #7a8288
+  }
 }
 
 .c-textbook__content {
