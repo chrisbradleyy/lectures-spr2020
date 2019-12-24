@@ -1,5 +1,5 @@
 /**
- * Styling for the onthispage elements.
+ * Styling for the onthispage elements. THE LEFT-SIDEBAR!!!
  *
  * [1]: The sidebar is implemented as ul and li elements so we need to remove
  *   the bullets and margins. Also make chapter fonts a bit bigger.
@@ -21,7 +21,7 @@ $color-sidebar-divider: #bbb !default;
 
   @include inuit-font-size(14px);
   border-right: 1px solid rgba(0, 0, 0, 0.07);
-  opacity: 0.9;
+  opacity: 1; // numbers below 1 will make the left sidebar background color less stark until a mouse hovers over it
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 
