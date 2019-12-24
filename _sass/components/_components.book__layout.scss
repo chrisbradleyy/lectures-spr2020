@@ -68,6 +68,7 @@ $topbar-height: 60px;
   width: $left-sidebar-width;
   top: 0;
   left: 0;
+ 	background-color: #502d0e; // newly added 
 }
 
 .c-textbook__page {
@@ -127,8 +128,6 @@ $topbar-height: 60px;
   justify-content: space-between;
   align-items: center;
   padding-top: 30px;
-   color: #ffffff; // newly added;
-	background-color: #502d0e; // newly added  
 }
 
 // Make sure that the bottom content has the same width as non-sidebar content
