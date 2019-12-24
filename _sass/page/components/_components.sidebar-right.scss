@@ -71,6 +71,7 @@ aside.sidebar__right {
 
 h4.nav__title {
     color: #ffffff; // was #7a8288;
+	background-color: #502d0e; // newly added
     margin: 0;
     padding: 0.5rem 1rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI',
@@ -78,7 +79,6 @@ h4.nav__title {
     font-size: 0.8em;
     font-weight: bold;
 
-	background-color: #502d0e; // newly added
 
 }
 
@@ -88,12 +88,16 @@ ul.toc__menu {
     width: 100%;
     list-style: none;
     font-size: 0.8rem;
+    color: #ffffff; // newly added
+	background-color: #502d0e; // newly added
+	
 }
 
 ul.toc__menu a {
     display: block;
     padding: 0.25rem .75rem;
     color: #ffffff; // was #898c8f;
+	background-color: #502d0e; // newly added
     font-size: 0.8em;
     font-weight: bold;
     line-height: 1.5;
@@ -101,9 +105,15 @@ ul.toc__menu a {
 
 .toc__menu ul {
     margin-left: 0px;
+    color: #ffffff; // newly added;
+	background-color: #502d0e; // newly added
+	
 }
 
 .toc__menu li ul {
+    color: #ffffff; // newly added;
+	background-color: #502d0e; // newly added
+
     li {
         list-style-type: none;
         padding-left: 18px;
