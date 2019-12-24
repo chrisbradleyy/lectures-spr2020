@@ -20,11 +20,11 @@
 - url: /intro
   not_numbered: true
 
-- title: "Motivation and Getting_Started"
+- title: "Motivation and Getting Started"
   url: "/01/00_Getting_Started"
   not_numbered: true  
   sections:
-  - title: "Motivation and Getting Started"
+  - title: "Motivation, Syllabus, GitHub"
     url: "/01/01_Motivation_and_Getting_Started"     
     not_numbered: false  
   - title: "Jupyter Basics"
