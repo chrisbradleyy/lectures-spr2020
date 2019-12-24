@@ -115,6 +115,10 @@ $topbar-height: 60px;
       width: calc(100% - #{$left-sidebar-width});
     }
   }
+  .c-textbook__sidebar {
+ 	background-color: #502d0e; // newly added 
+}
+
 }
 
 .c-textbook__content {
