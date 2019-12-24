@@ -11,8 +11,8 @@
  * [6]: The footer at the bottom of the sidebar
  */
 $color-sidebar-bg: rgba(255, 255, 255, 0) !default;
-$color-sidebar-entry: #364149 !default;
-$color-sidebar-entry--active: $color-links !default;
+$color-sidebar-entry: #ffffff !default; // was: #364149 !default;
+$color-sidebar-entry--active: #FBDD40 !default; // was: $color-links !default;
 $color-sidebar-divider: #bbb !default;
 
 .c-textbook__sidebar {
@@ -21,7 +21,7 @@ $color-sidebar-divider: #bbb !default;
 
   @include inuit-font-size(14px);
   border-right: 1px solid rgba(0, 0, 0, 0.07);
-  opacity: 0.6;
+  opacity: 0.9;
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 
