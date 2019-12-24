@@ -37,7 +37,7 @@ $topbar-height: 60px;
 }
 
 .c-topbar {
-  background-color: #502d0e; // was: $book-background-color;
+  background-color: $book-background-color;
   position: fixed;
   top: 0;
   height: $topbar-height;
@@ -53,6 +53,10 @@ $topbar-height: 60px;
     // At desktop, we stop hiding the navbar
     top: -250px;
   }
+}
+
+.c-textbook__sidebar {
+ 	background-color: #502d0e; // newly added 
 }
 
 .c-textbook__sidebar,
