@@ -61,14 +61,13 @@ $topbar-height: 60px;
   height: 100vh;
   overflow: auto;
   position: fixed;
-  background-color: $book-background-color; /* [3] */
+  background-color: #502d0e; // was:  background-color: $book-background-color; /* [3] */
 }
 
 .c-textbook__sidebar {
   width: $left-sidebar-width;
   top: 0;
   left: 0;
-  color: #ffffff; // newly added;
   background-color: #502d0e; // newly added  
 }
 
