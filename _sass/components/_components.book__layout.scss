@@ -37,7 +37,7 @@ $topbar-height: 60px;
 }
 
 .c-topbar {
-  background-color: $book-background-color;
+  background-color: #502d0e; // was: $book-background-color;
   position: fixed;
   top: 0;
   height: $topbar-height;
