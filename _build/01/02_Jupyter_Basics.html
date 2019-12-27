@@ -13,7 +13,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: todo work jupyter class before next refers lets start learning outline opening writing python markdown switching modes cool www dataquest io blog notebook tips tricks shortcuts credits sections classes cannabilze delete making public overview materials check ins questions me clarify think pair share optionally tell us something insightful partner graded related always includes uploading days code assignments underway peer review references link back landing page needed
+search: jupyter python notebook cell file code help new class command documentation html open mode folder copy lets work ipython files computer type menu into github io data quantecon org object means location where run below insert keyboard switch commands through science tutorial simple text page output after resources anaconda powershell want create firstpythoncode here shell click save under right typing hit search jakevdp everything browser easy users great every much inside program opening download back lecture its prompt terminal select tab py dir paste participation check useful lines works add edit border around esc markdown drop answer palette d play
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -25,7 +25,25 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Let's-start-learning-how-to-work-in-Jupyter">Let's start learning how to work in Jupyter<a class="anchor-link" href="#Let's-start-learning-how-to-work-in-Jupyter"> </a></h1>
+<h1 id="Let's-start-learning-how-to-work-in-Jupyter">Let's start learning how to work in Jupyter<a class="anchor-link" href="#Let's-start-learning-how-to-work-in-Jupyter"> </a></h1><p>Python is</p>
+<ul>
+<li>general-purpose programming language conceived in 1989 by Dutch programmer Guido van Rossum.</li>
+<li>free and open source</li>
+<li>has simple syntax</li>
+<li>object oriented: EVERYTHING IS AN OBJECT</li>
+<li>popular among the largest tech firms in the world: Google, Amazon, Uber, Dropboz, Reddit, Youtube, ...</li>
+<li>popular in the scientific community: academia, NASA, CERN, Wall Street, ...</li>
+</ul>
+<p>Jupyter (Notebook) aka IPython</p>
+<ul>
+<li>is one way to write and execute Python code</li>
+<li>is browser based</li>
+<li>results in files that <strong>are easy to share</strong> and rerun (and thus easy to collaborate with)</li>
+<li>allows users to mix code and formatted text and mathematical expressions (and thus produces elegant and easy-to-digest reports)</li>
+<li>is great for new coders</li>
+</ul>
+<p>In fact, almost every page on this website is a Jupyter Notebook! Notice how there are headers, full text formatting, media inserts, and also code snippets and output. This means readers see output immediately after the relevant code, and makes understanding code much easier.</p>
+
 </div>
 </div>
 </div>
@@ -35,11 +53,13 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Outline">Outline<a class="anchor-link" href="#Outline"> </a></h2><p>%todo</p>
+<h1 id="Outline">Outline<a class="anchor-link" href="#Outline"> </a></h1><p>%todo</p>
 <ol>
-<li>Opening Jupyter</li>
-<li>Writing Python, Markdown, and switching modes</li>
-<li>.....................</li>
+<li>Writing our first Python file</li>
+<li>Jupyter: working with cells and inside cells</li>
+<li><a href="#resources-help-and-documentation">THE MOST IMPORTANT PART OF THIS PAGE</a></li>
+<li>A simple program</li>
+<li></li>
 </ol>
 
 </div>
@@ -51,8 +71,15 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="#">#<a class="anchor-link" href="##"> </a></h1><p>%todo</p>
-<p>This is cool <a href="https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/">https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/</a></p>
+<h1 id="Opening-Jupyter-and-Basic-Usage">Opening Jupyter and Basic Usage<a class="anchor-link" href="#Opening-Jupyter-and-Basic-Usage"> </a></h1><p>Did you download and install Anaconda? If yes, we can proceed. If not, go back to the lecture files and follow the instructions so that you can follow along. (And if you haven't, then you aren't doing the after class work!)</p>
+<p><strong>So, let's write our first file!</strong></p>
+<h2 id="Opening-a-new-file,-and-choosing-its-location-on-your-computer">Opening a new file, and choosing its location on your computer<a class="anchor-link" href="#Opening-a-new-file,-and-choosing-its-location-on-your-computer"> </a></h2><p>Your options:</p>
+<ol>
+<li>Windows: Open Anaconda Powershell Prompt and type <code>jupyter notebook</code> </li>
+<li>Mac: Open Terminal and type <code>jupyter notebook</code> </li>
+<li>Either: Open Anaconda Navigator (which opens a menu of programs) and then select Jupyter</li>
+</ol>
+<p><strong>Practice: Try one of these!</strong> All of these open a new tab on your browser:</p>
 
 </div>
 </div>
@@ -63,8 +90,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Before-next-class">Before next class<a class="anchor-link" href="#Before-next-class"> </a></h2><p>%todo</p>
-<p>1.</p>
+<p><img src="img/open-notebook.png" alt=""></p>
 
 </div>
 </div>
@@ -75,7 +101,251 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Credits">Credits<a class="anchor-link" href="#Credits"> </a></h2><p>%todo</p>
+<h4 id="A-fourth-option-to-open-Jupyter-Notebook:">A fourth option to open Jupyter Notebook:<a class="anchor-link" href="#A-fourth-option-to-open-Jupyter-Notebook:"> </a></h4><p>Now, navigating from there to a folder/director where a python file is, or where you want it to be, can be annoying, so what I usually do to open Jupyter is:</p>
+<ol>
+<li>Navigate on your computer to the folder you want to work in/where the Py file is. Often, you'll create a new folder specific to the project. Let's call today's project "FirstPythonCode" and create a folder for it. You can put it wherever you want. </li>
+<li>Find the full path to the folder, e.g. <code>C:\Users\Don\FirstPythonCode</code></li>
+<li>In Terminal or Powershell type <code>jupyter notebook --notebook-dir "C:\Users\Don\FirstPythonCode"</code> <ul>
+<li>Here the <code>--notebook-dir</code> means that we are opening Jupyter but want to choose the notebook location, and then we type the location.</li>
+<li>I have this command (<code>jupyter notebook --notebook-dir</code>) pasted into a note on my computer so I can quickly copy and paste it into the shell. </li>
+</ul>
+</li>
+</ol>
+<p><strong>Practice:</strong></p>
+<ul>
+<li><em><strong>Create a folder on your computer called "FirstPythonCode"</strong></em></li>
+<li><em><strong>Open Jupyter Notebook so that you can see files in that location.</strong></em> You can either navigate within the browser by point-and-click navigation, or use the </li>
+<li><em><strong>Click on "New" and "Python 3" to create a new notebook.</strong></em></li>
+<li><em><strong>Stop here so we can discuss what you're seeing.</strong></em></li>
+</ul>
+<p><strong>We are going to do a lot of livecoding together in class. Save these files as they are at the end of class, as I'm thinking these will be part of your participation grade.</strong></p>
+<p>A sample notebook will look like this:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="img/firstbook-notes1.png" alt=""></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Jupyter-Basics">Jupyter Basics<a class="anchor-link" href="#Jupyter-Basics"> </a></h2><p>Let's do the following:</p>
+<ol>
+<li>Save that file: Give it a name at the top: "In Class-Lecture 2". Now look in the folder on your computer - it should be there! <strong>CHECK-IN: Do you see it?</strong> Note that under the "File" menu you can<ul>
+<li>Make a copy</li>
+<li>"Save As" (give it a new name/location, and the existing file will remain where it it)</li>
+<li>"Save and checkpoint". You can "roll back" to this checkpoint later. Useful while exploring!</li>
+</ul>
+</li>
+<li>Let's type some Python in the notebook <ul>
+<li>Copy the first 3 lines in example above. Do you notice the syntax coloring?</li>
+<li>The hashtags/pound signs are the "comment signal". They tell Python to ignore everything to the right of it on that line, so that you can write notes to anyone looking at the code.</li>
+</ul>
+</li>
+<li>Run that code:<ul>
+<li><code>CTRL+ENTER</code> will run the code in the active cell</li>
+<li>"Kernel" menu &gt; "Restart and Clear Output" will clear the workspace (so Python will forget all variables and objects in memory for this session) and then "Cell" menu &gt; "Run All" will rerun everything. <strong>YOU MUST DO THIS ON EVERY FILE WHEN YOU ARE DONE TO ENSURE THAT THE CODE WORKS IN ORDER AND CAN BE REPRODUCED BY OTHERS</strong></li>
+</ul>
+</li>
+<li>Add a new cell below by <em><strong>clicking</strong></em> "Insert" &gt; "Insert Cell Below".</li>
+<li>Add a new cell below by <em><strong>keyboard shortcut</strong></em>. To do that, we need a quick disgression:</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_popout">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em><strong>Jupyter notebook uses a modal editing system.</strong></em></p>
+<p>This means that the effect of typing at the keyboard depends on which mode you are in. The two modes are</p>
+<ol>
+<li>When you are typing inside a cell, you are in <strong>Edit mode</strong>, and there is a green border around that cell. <strong>Switch into edit mode by hitting <code>Enter</code> or double clicking in the cell.</strong></li>
+<li><strong>Command mode</strong> means that keystrokes are interpreted by Jupyter as commands (e.g. insert a new cell). When you are in command mode, the green border is replaced by a grey/blue border. <strong>Hit <code>ESC</code> to switch to command mode.</strong></li>
+</ol>
+<p>The modal behavior of the Jupyter notebook is a little tricky at first but very efficient when you get used to it.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So switch to command mode (hit <code>ESC</code>) and insert the new cell below by typing <code>b</code>.</p>
+<ol>
+<li>Switch the inserted cell to markdown (via the markdown/code drop down box) and write several lines.</li>
+<li><p>Split the markdown cell in half and insert a cell in the middle of those halves.</p>
+<ul>
+<li><p><del>How do you split a cell in half?</del> Better question: Where do you look for an answer about how to do that?</p>
+<p><strong>This is a good time to explore!</strong> Take the "user interface tour" under help, then look through the various menus, check out the Keyboard Shortcuts (under the help menu), and then search through the "command palette" (which looks like a keyboard icon at the right side of the Notebook Toolbar). <strong>The command palette is very useful because you can search for commands!</strong> Return to the shortcut menu and command palette often!!!</p>
+</li>
+</ul>
+</li>
+<li><p>Switch that middle cell to "code" mode via keyboard shortcuts.</p>
+</li>
+<li>Add a cell at the bottom of the notebook, and then delete it: <code>ESC</code> to go to command mode and then <code>D</code>,<code>D</code> (hit the "d" button twice).</li>
+</ol>
+<h3 id="Class-poll?-How-did-we-do?-9/9?">Class poll? How did we do? 9/9?<a class="anchor-link" href="#Class-poll?-How-did-we-do?-9/9?"> </a></h3><p>If so, we're in great shape! Obviously, we will learn much more going forward, but you have enough to play around with Jupyter now. I <strong>highly</strong> recommend doing some introductory Python tutorials over the weekend. The bottom of this page lists some great places to start.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Resources,-help,-and-documentation">Resources, help, and documentation<a class="anchor-link" href="#Resources,-help,-and-documentation"> </a></h1><p>The <a href="https://jakevdp.github.io/PythonDataScienceHandbook/01.01-help-and-documentation.html">help and documentation</a> section of the "Python Data Science Handbook" by Jake VanderPlas begins by saying:</p>
+<blockquote><p><strong>If you read no other section in this chapter, read this one: I find the tools discussed here to be the most transformative contributions of IPython to my daily workflow.</strong></p>
+<p>When a technologically-minded person is asked to help a friend, family member, or colleague with a computer problem, most of the time it's less a matter of knowing the answer as much as knowing how to quickly find an unknown answer. In data science it's the same: searchable web resources such as online documentation, mailing-list threads, and StackOverflow answers contain a wealth of information, even (especially?) if it is a topic you've found yourself searching before. <del>Being an effective practitioner of data science</del> Being efficient in many aspects of life these days is less about memorizing the tool or command you should use for every possible situation, and more about learning to effectively find the information you don't know, whether through a web search engine or another means.</p>
+<p>One of the most useful functions of IPython/Jupyter is to shorten the gap between the user and the type of documentation and search that will help them do their work effectively. While web searches still play a role in answering complicated questions, an amazing amount of information can be found through IPython alone.</p>
+</blockquote>
+<p>The <a href="https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#the-four-most-helpful-commands">official IPython documentation</a> lists the <strong>"Four most helpful commands</strong> as:</p>
+<table>
+<thead><tr>
+<th>command</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>?</td>
+<td>Introduction and overview of IPython’s features.</td>
+</tr>
+<tr>
+<td>%quickref</td>
+<td>Quick reference.</td>
+</tr>
+<tr>
+<td>help(<on-what>)</td>
+<td>Python’s own help system.</td>
+</tr>
+<tr>
+<td>object?</td>
+<td>Details about ‘object’, use ‘object??’ for extra details</td>
+</tr>
+</tbody>
+</table>
+<p>Now, let's go to <a href="https://jakevdp.github.io/PythonDataScienceHandbook/01.01-help-and-documentation.html">Python Data Science Handbook</a>, elaborates nicely on:</p>
+<ul>
+<li>accessing documentation with <code>?</code> (quicker than typing <code>help()</code></li>
+<li>tab completion (objects, packages)</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="A-simple-program:-importing-data-and-packages">A simple program: importing data and packages<a class="anchor-link" href="#A-simple-program:-importing-data-and-packages"> </a></h1><p>Simple test program with ourworldindata or macro time series from FRED, SP index, wine prices</p>
+<p>They don’t need to understand it yet, just point is to see it in action. Pandas to download and then produce some nice plots (UO Ec day 1 does something dope)</p>
+<p>a pop out can contrast output of these from (1) a “py” only + word doc approach vs (2) a nicely formatted standalone Jupyter file</p>
+<p>Have this as a simple_test_prog.py file linked, that they can download when I show them how to “run local file” below, and copy to their class participation file to run</p>
+<p>Make some points about import lines (as in <a href="https://python.quantecon.org/python_by_example.html">https://python.quantecon.org/python_by_example.html</a>)</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Installing-libraries">Installing libraries<a class="anchor-link" href="#Installing-libraries"> </a></h2><p>(quantecon has a sketch, but we can be clearer)</p>
+<p><a href="https://python.quantecon.org/python_essentials.html">https://python.quantecon.org/python_essentials.html</a></p>
+<p>As the above example shows...</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Working-with-files-(quantecon)">Working with files (quantecon)<a class="anchor-link" href="#Working-with-files-(quantecon)"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="How-to-close-down-files-after-class">How to close down files after class<a class="anchor-link" href="#How-to-close-down-files-after-class"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Reminder:-Drop-in-hours">Reminder: Drop-in hours<a class="anchor-link" href="#Reminder:-Drop-in-hours"> </a></h1><p><a href="https://ledatascifi.github.io/#student-drop-in-hours">They are listed here</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Before-next-class">Before next class<a class="anchor-link" href="#Before-next-class"> </a></h2><ol>
+<li>After class: Upload the notebook you've been playing with into your participation repo. </li>
+<li>Writing commands into Terminal/Powershell can be slow. Would you like to be able to copy and paste? Doesn't that sound faster? Then activate it! So <ol>
+<li>Right click on the title bar of the Anaconda Powershell Prompt</li>
+<li>Select Defaults</li>
+<li>Under "Edit Options", select all the boxes.</li>
+<li>Verify it works by copying some text in the prompt (highlight any text in the shell, and hit <code>ENTER</code> to copy) and pasting it (<code>right click</code> anywhere inside the shell). </li>
+<li>Close the shell, reopen it, and do the copy/paste test again. If it works, we're set!</li>
+</ol>
+</li>
+<li>Python intro tutorials. Go to the <a href="https://ledatascifi.github.io/studentresourcevert/resource-landing.html#python">Resources tab</a> of this website. <ul>
+<li>Look at some of the cheatsheets I provided there.</li>
+<li>Walk through a tutorial tutorial. You can do some of <a href="https://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/Index.ipynb">Whirlwind of Python</a> or instead some of <a href="https://www.datacamp.com/">Datacamp</a>. Just play around a little! (The <a href="https://docs.python.org/3/tutorial/introduction.html">official python documentation tutorial</a> is pretty good too, as is <a href="https://diveinto.org/python3/table-of-contents.html">Dive into python</a></li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Credits">Credits<a class="anchor-link" href="#Credits"> </a></h2><p>This lecture borrowed from the first chapter of the <a href="https://jakevdp.github.io/PythonDataScienceHandbook/index.html">Python Data Science Handbook</a> and [QuantEcon}(<a href="https://python.quantecon.org/index_learning_python.html">https://python.quantecon.org/index_learning_python.html</a>).</p>
 
 </div>
 </div>
@@ -87,9 +357,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Sections-for-most-classes">Sections for most classes<a class="anchor-link" href="#Sections-for-most-classes"> </a></h2><p>%todo, cannabilze and delete before making public</p>
-<p>-overview, 
--materials, 
--what to do next, 
+<p>-materials, 
 -Check ins: What questions do you have for me? "What can I clarify for you?"
 -Think Pair share, optionally:Who can tell us something insightful that your partner said?
 -graded work related to this class (always includes uploading day’s in class code work, refers to assignments underway, refers to peer review), 
