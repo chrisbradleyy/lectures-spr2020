@@ -13,7 +13,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: jupyter python notebook cell file code help new class command documentation html open mode folder copy lets work ipython files computer type menu into github io data quantecon org object means location where run below insert keyboard switch commands through science tutorial simple text page output after resources anaconda powershell want create firstpythoncode here shell click save under right typing hit search jakevdp everything browser easy users great every much inside program opening download back lecture its prompt terminal select tab py dir paste participation check useful lines works add edit border around esc markdown drop answer palette d play
+search: python jupyter notebook cell file code help class new command documentation html open mode tab ipython folder copy lets work object files computer type menu into github io data quantecon org page means after location where click check right run below insert keyboard switch commands through science tutorial completion simple text output resources anaconda powershell want create firstpythoncode here shell save under hit search jakevdp everything browser easy users great every much inside program opening download back lecture its prompt terminal select py dir paste participation should useful lines example works add modal system typing edit border around esc markdown
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -101,7 +101,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="A-fourth-option-to-open-Jupyter-Notebook:">A fourth option to open Jupyter Notebook:<a class="anchor-link" href="#A-fourth-option-to-open-Jupyter-Notebook:"> </a></h4><p>Now, navigating from there to a folder/director where a python file is, or where you want it to be, can be annoying, so what I usually do to open Jupyter is:</p>
+<h3 id="A-fourth-option-to-open-Jupyter-Notebook:">A fourth option to open Jupyter Notebook:<a class="anchor-link" href="#A-fourth-option-to-open-Jupyter-Notebook:"> </a></h3><p>Now, navigating from there to a folder/director where a python file is, or where you want it to be, can be annoying, so what I usually do to open Jupyter is:</p>
 <ol>
 <li>Navigate on your computer to the folder you want to work in/where the Py file is. Often, you'll create a new folder specific to the project. Let's call today's project "FirstPythonCode" and create a folder for it. You can put it wherever you want. </li>
 <li>Find the full path to the folder, e.g. <code>C:\Users\Don\FirstPythonCode</code></li>
@@ -160,7 +160,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 </ul>
 </li>
 <li>Add a new cell below by <em><strong>clicking</strong></em> "Insert" &gt; "Insert Cell Below".</li>
-<li>Add a new cell below by <em><strong>keyboard shortcut</strong></em>. To do that, we need a quick disgression:</li>
+<li>Add a new cell below by <em><strong>keyboard shortcut</strong></em>. To do that, we need a quick disgression on Jupyter's modal editing system. Check out the popout to the right. </li>
 </ol>
 
 </div>
@@ -189,6 +189,24 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
 <p>So switch to command mode (hit <code>ESC</code>) and insert the new cell below by typing <code>b</code>.</p>
 <ol>
 <li>Switch the inserted cell to markdown (via the markdown/code drop down box) and write several lines.</li>
@@ -219,37 +237,43 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <p>When a technologically-minded person is asked to help a friend, family member, or colleague with a computer problem, most of the time it's less a matter of knowing the answer as much as knowing how to quickly find an unknown answer. In data science it's the same: searchable web resources such as online documentation, mailing-list threads, and StackOverflow answers contain a wealth of information, even (especially?) if it is a topic you've found yourself searching before. <del>Being an effective practitioner of data science</del> Being efficient in many aspects of life these days is less about memorizing the tool or command you should use for every possible situation, and more about learning to effectively find the information you don't know, whether through a web search engine or another means.</p>
 <p>One of the most useful functions of IPython/Jupyter is to shorten the gap between the user and the type of documentation and search that will help them do their work effectively. While web searches still play a role in answering complicated questions, an amazing amount of information can be found through IPython alone.</p>
 </blockquote>
-<p>The <a href="https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#the-four-most-helpful-commands">official IPython documentation</a> lists the <strong>"Four most helpful commands</strong> as:</p>
+<p>The <a href="https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#the-four-most-helpful-commands">official IPython documentation</a> has the same gist. So let's call the <strong>"Five most helpful commands in IPython</strong>:</p>
 <table>
 <thead><tr>
 <th>command</th>
 <th>description</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>?</td>
-<td>Introduction and overview of IPython’s features.</td>
+<td>Python documentation</td>
+<td><code>len?</code></td>
 </tr>
 <tr>
 <td>%quickref</td>
 <td>Quick reference.</td>
+<td>.</td>
 </tr>
 <tr>
 <td>help(<on-what>)</td>
 <td>Python’s own help system.</td>
+<td><code>help(len)</code></td>
 </tr>
 <tr>
 <td>object?</td>
 <td>Details about ‘object’, use ‘object??’ for extra details</td>
 </tr>
+<tr>
+<td>\&lt; TAB &gt;</td>
+<td>Auto-completion menus (REALLY HELPFUL!)</td>
+<td><code>import</code> \&lt; TAB &gt;</td>
+</tr>
 </tbody>
 </table>
-<p>Now, let's go to <a href="https://jakevdp.github.io/PythonDataScienceHandbook/01.01-help-and-documentation.html">Python Data Science Handbook</a>, elaborates nicely on:</p>
-<ul>
-<li>accessing documentation with <code>?</code> (quicker than typing <code>help()</code></li>
-<li>tab completion (objects, packages)</li>
-</ul>
+<p><a href="https://jakevdp.github.io/PythonDataScienceHandbook/01.01-help-and-documentation.html#Tab-completion-of-object-contents">Python Data Science Handbook</a>, elaborates nicely on <code>?</code> and tab completion.</p>
+<p>If we have time, click that last link and check out tab completion. If not, everyone should do this after class. I find tab-completion absolutely essential, and think you'll be happy to know it!</p>
 
 </div>
 </div>
@@ -332,6 +356,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <li>Python intro tutorials. Go to the <a href="https://ledatascifi.github.io/studentresourcevert/resource-landing.html#python">Resources tab</a> of this website. <ul>
 <li>Look at some of the cheatsheets I provided there.</li>
 <li>Walk through a tutorial tutorial. You can do some of <a href="https://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/Index.ipynb">Whirlwind of Python</a> or instead some of <a href="https://www.datacamp.com/">Datacamp</a>. Just play around a little! (The <a href="https://docs.python.org/3/tutorial/introduction.html">official python documentation tutorial</a> is pretty good too, as is <a href="https://diveinto.org/python3/table-of-contents.html">Dive into python</a></li>
+<li><a href="https://realpython.com/python-first-steps/#8-python-idioms-happy-coding">Sections 1, 5, and 8 of this page</a> describes some elemental Python things</li>
 </ul>
 </li>
 </ol>
