@@ -17,6 +17,13 @@
 # - header: My Header  # Will insert a header with no link in the sidebar
 
 
+- title: "Homepage (Schedule, Syllabus, Assignments, Resources)"
+  url: "https://ledatascifi.github.io"
+  external: true
+  not_numbered: true  
+
+- divider: true
+
 - url: /intro
   not_numbered: true
 
