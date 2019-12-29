@@ -1,0 +1,3 @@
+#ffffff; white
+#502d0e; // newly added brown
+#FBDD40; // newly added, yellow 
