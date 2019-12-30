@@ -13,7 +13,7 @@ prev_page:
 next_page:
   url: /01/02_Jupyter_Basics.html
 suffix: .ipynb
-search: github li img com class src width media giphy anaconda work start programming data valuable git its python www not never code our lectures download install should html gif ul getting try things open jupyter course before next employers png skills jpg any just project always skill even again week old need those semester journey computer assignments hours create desktop ec stat powershell prompt motivation site pay href org demand languages scientists problem question mind ol b needed projects report version acquire spent often modeling analysis using tools technical hope youll something bargain im still easy why outside easier times
+search: github com git repo img li ledatascifi class its work participation account changes src width should anaconda repository python media giphy just version io desktop file html project code page commit org programming data not valuable issues together button clicking master local course gif never using our computer new lectures click get collaboration min files repositories made stat open start next www any ul projects want those why getting try things assignments section download watch cloud storage control turn username user url called email history view jupyter before yes employers png skills jpg recent question always skill even again week
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -174,7 +174,8 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <li><del>office hours</del> drop-in hours to ask questions </li>
 <li>major topics and themes</li>
 <li>syllabus</li>
-<li>Note the website has verticals with the daily schedule, assignments, and lectures. Please bookmark and visit these often! The class is still in development, so things will change frequently. </li>
+<li>you should check out the schedule frequently!</li>
+<li>I'll skip for now, but you should check out the assignments, participation, and resources tab. Please bookmark the main page and visit these often! The class is still in development, so things will change frequently. </li>
 </ul>
 
 </div>
@@ -186,27 +187,16 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Getting-started---Our-programming-stack">Getting started - Our programming stack<a class="anchor-link" href="#Getting-started---Our-programming-stack"> </a></h2><p>Click on 1, 2, and 3 to get the downloads going in the background. Then, go to GitHub and create an account so we can work through GitHub together in the next section while our computers download and install the programs.</p>
+<h2 id="Getting-started---Our-programming-stack">Getting started - Our programming stack<a class="anchor-link" href="#Getting-started---Our-programming-stack"> </a></h2><p>Click on these links to get the downloads going. Then, we will go on to the next section while these continue in the background.</p>
 <ol>
-<li><p>Download and start install of <a href="https://www.anaconda.com/distribution/">Anaconda</a> (not <a href="https://www.youtube.com/watch?v=LDZX4ooRsWs">the Nicki Minaj song</a>)</p>
-<ul>
-<li>Install the latest version, make Anaconda your default Python installation, and accept all the defaults otherwise </li>
-</ul>
+<li><p>Download <a href="https://www.anaconda.com/distribution/">Anaconda</a> (not <a href="https://www.youtube.com/watch?v=LDZX4ooRsWs">the Nicki Minaj song</a>). <em>Install the latest version, make Anaconda your default Python installation, and accept all the defaults otherwise.</em></p>
 </li>
-<li><p>Windows users only: Download and start install of <a href="https://git-scm.com/download/">Git</a></p>
-<ul>
-<li>I don't believe Mac users need to do this</li>
-</ul>
+<li><p>Download <a href="https://git-scm.com/download/">Git</a>.</p>
 </li>
-<li><p>Download and start install of a Git <strong><em>client</em></strong>: <a href="https://desktop.github.com/">GitHub Desktop</a></p>
-<ul>
-<li>I accepted the defaults</li>
-</ul>
-</li>
-<li><p>Create an account on <a href="https://www.github.com">GitHub</a></p>
+<li><p>Download a Git <strong><em>client</em></strong>: To make our lives simpler, I recommend <a href="https://desktop.github.com/">GitHub Desktop</a>. <em>I accepted the default settings.</em></p>
 </li>
 </ol>
-<p>"Fun" fact: It is annoying that the names are so similar, but Git $\neq$ GitHub $\neq$ GitHub Desktop!</p>
+<p>"Fun" fact: It is annoying that the names are so similar, but Git $\neq$ GitHub $\neq$ GitHub Desktop! This will make more sense soon, I promise!</p>
 
 </div>
 </div>
@@ -217,7 +207,167 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Github">Github<a class="anchor-link" href="#Github"> </a></h2><p>Before we get to</p>
+<h2 id="Github">Github<a class="anchor-link" href="#Github"> </a></h2><p>We will be using <a href="https://github.com">GitHub</a> a lot in this course:</p>
+<ul>
+<li>All of your course-related work will go on GitHub.</li>
+<li>Discussion / help / announcements will happen on GitHub. (Yes, announcements!)</li>
+<li>This entire website is on GitHub!</li>
+<li>Assignments are posted on GitHub.</li>
+</ul>
+<p>But why GitHub? Because it's tremendously effective for developing a project. It is used by <a href="https://github.com/apple">Apple</a>, <a href="https://github.com/uber">Uber</a>, <a href="https://github.com/Netflix">Netflix</a>, Google, Microsoft, Bitcoin, CERN, Chinese censors (wait, what?), and many more large, sophisticated, multi-billion dollar entities.</p>
+<p>It's useful for (1) cloud storage, (2) collaboration, and (3) version control.</p>
+<h3 id="Register-a-GitHub-account">Register a GitHub account<a class="anchor-link" href="#Register-a-GitHub-account"> </a></h3><p>Your turn: <strong>Register for a free account on <a href="https://github.com">github.com</a>.</strong> <em>Give your username <a href="https://happygitwithr.com/github-acct.html#username-advice">some thought</a>.</em>  (Ideally, it should include your name.)</p>
+<h3 id="GitHub-as-cloud-storage-(4-min)">GitHub as cloud storage (4 min)<a class="anchor-link" href="#GitHub-as-cloud-storage-(4-min)"> </a></h3><p>At the very least, GitHub allows for cloud storage, like Google Drive and Dropbox do. There's a bit more structure than just storing files under your account:</p>
+<ul>
+<li><strong>Repositories (aka "repo")</strong>: All files must be organized into <em>repositories</em>. Think of these as self-contained projects. These can either be <em>public</em> or <em>private</em>.</li>
+<li><strong>User Accounts</strong> vs. <strong>Organization Accounts (aka "Org")</strong>: All repositories belong to an account:<ul>
+<li>A <em>user account</em> is the account you just made, and typically holds repositories related to your own work. </li>
+<li>An <em>Organization</em> account can be owned by multiple people, and typically holds repositories relevant to a group (like STAT 545).</li>
+</ul>
+</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>The <a href="https://github.com/LeDataSciFi/LeDataSciFi.github.io"><code>LeDataSciFi.github.io</code></a> repo, within its corresponding <code>LeDataSciFi</code> Org. </li>
+<li>The <a href="https://github.com/vinta/awesome-python"><code>awesome-python</code></a> repo is a "curated list of awesome Python frameworks, libraries, software and resources" </li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="GitHub-as-cloud-storage---Activity-(10-min)">GitHub as cloud storage - Activity (10 min)<a class="anchor-link" href="#GitHub-as-cloud-storage---Activity-(10-min)"> </a></h3><p><strong>Together: Make a participation repo</strong></p>
+<ul>
+<li>Follow the <a href="https://ledatascifi.github.io/participation/participation.html/#setup">setup instructions</a> on the participation page. </li>
+</ul>
+<p><strong>Navigating GitHub</strong></p>
+<ol>
+<li>Together: Make a new file on your participation repository:<ul>
+<li>Click on the "Create New File" button on your repository's home page.</li>
+<li>Call it <code>navigating_github.md</code></li>
+<li>Leave it blank, and commit ("save") the file by clicking on green "commit new file" button at the bottom of the page.</li>
+</ul>
+</li>
+<li>Together: Add the following URL's to your <code>navigating_github.md</code> file (click on the pen button to edit), together with some commentary:<ul>
+<li>URL and name of the repository for the FIN377 home page, called <code>LeDataSciFi.github.io</code> </li>
+<li>The account it's under.</li>
+<li>Whether the account is a <em>user account</em> or an <em>Org</em>.</li>
+</ul>
+</li>
+<li>Together: Commit the changes.</li>
+<li>Your turn: Continue the exercise, and add more URL's (with more commentary):<ul>
+<li>The URL to your participation repo</li>
+<li>The URL to your user account page</li>
+</ul>
+</li>
+<li>Your turn: Commit the changes.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="GitHub-for-collaboration-(4-min)">GitHub for collaboration (4 min)<a class="anchor-link" href="#GitHub-for-collaboration-(4-min)"> </a></h3><p>The "traditional" way to collaborate involves sending files over email. But emails get buried, and, also... who has the most recent version, and what is it?
+<img src="http://phdcomics.com/comics/archive/phd101212s.gif" alt="You don't want this" width="50%" ></p>
+<p>Git(Hub) solves this!</p>
+<p>Git (just "Git") is a distributed version control system. Basically: "Imagine if Dropbox and the "Track changes" feature in MS Word had a baby. Git would be that baby." It's great for us because it's optimized for code.</p>
+<p>GitHub (not just "Git") is built on top of the Git system. Among the many added features that make collaboration easier, two are worth highlighting:</p>
+<ul>
+<li>The GitHub repository is treated as the "master version".</li>
+<li><strong>You can (and probably should!) use <a href="https://guides.github.com/features/issues/">GitHub Issues</a> instead of email to track open tasks.</strong> <ul>
+<li><em>Issues</em> are a discussion board corresponding to a particular repository. </li>
+<li>One "thread" is called an Issue. Some features:</li>
+<li>You can tag other GitHub users using <code>@username</code>.</li>
+<li>Get email notifications if you are tagged, or are <code>Watch</code>ing a repository.</li>
+</ul>
+</li>
+</ul>
+<p>As an example, check out the Issues in the <a href="https://github.com/tidyverse/ggplot2"><code>ggplot2</code></a> repository.</p>
+<p>We will talk about collaboration later. Suffice it to say, managing group tasks is of paramount importance in virtually all jobs you might have after college.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="GitHub-for-collaboration---Activity-(1-min)">GitHub for collaboration - Activity (1 min)<a class="anchor-link" href="#GitHub-for-collaboration---Activity-(1-min)"> </a></h3><p><strong>Together: <code>Watch</code>ing the <code>Discussions</code> repo. THIS IS WHERE CLASS ANNOUNCEMENTS WILL BE POSTED.</strong></p>
+<ol>
+<li>Navigate to the LeDataSciFi <a href="https://github.com/LeDataSciFi/Discussion">Discussions</a> repository.</li>
+<li>Click <code>Watch</code> on the upper-right corner of the repo</li>
+</ol>
+<p>You should now get an email notification whenever an Issue is posted by myself, the TA, or if your classmates ask a question.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="GitHub-for-version-control-with-Git-(5-min)">GitHub for version control with Git (5 min)<a class="anchor-link" href="#GitHub-for-version-control-with-Git-(5-min)"> </a></h3><p>This is so important, I'm elevating this to a section header:</p>
+<h2 id="THE-WORKFLOW-RECIPE">THE WORKFLOW RECIPE<a class="anchor-link" href="#THE-WORKFLOW-RECIPE"> </a></h2><p>To start a project:</p>
+<ol>
+<li>Create a participation repo on GitHub and initialize with a README.</li>
+<li>Clone the repo to your local machine using GitHub desktop. </li>
+</ol>
+<p>Now, every time you want to work on the project:</p>
+<ol>
+<li>Sync the exiting master repo with your local repo on your computer (just in case a change was made by others). GitHub Desktop calls this operation a "<strong>fetch</strong>" and Git calls this a "<strong>pull</strong>".</li>
+<li>Work on the project in the local repo (on your computer).</li>
+<li>"<strong>Stage</strong>" the files to tell Git about those changes. GitHub Desktop automatically see changes made in the local repo. (Nice!)</li>
+<li>"<strong>Commit</strong>" to the changes to tell Git, "yes, I want to do this, and what I did was [describe the changes]". In GitHub Desktop, this means adding a short summary and (optionally) a longer description. </li>
+<li>You "<strong>fetch</strong>"/"<strong>pull</strong>" changes made on the master repo down to your local repo, in case other GitHub users (or you on a different machine) made changes while you were working on step # 1. If there are any conflicts, you'll be notified and prompted to fix them. </li>
+<li>You "<strong>push</strong>" the commited local changes to the master GitHub repo.</li>
+</ol>
+<ul>
+<li>Git only pushes/tracks the <em>changes</em> (called a <em>diff</em>) associated with a commit, so that it doesn't need to take a snapshot of all your files each time. </li>
+</ul>
+<p>As I mentioned previously, GitHub uses a program called <code>git</code> to keep track of the project's history (more about <code>git</code> next Thursday).</p>
+<p><strong>The best-practices workflow with Git, and the four main Git operations:</strong></p>
+<p>My turn: Demostrate some of the Git elements</p>
+<ul>
+<li>View commit history of the <a href="https://github.com/LeDataSciFi/LeDataSciFi.github.io">LeDataSciFi.github.io</a> repository by clicking on the "commits" button on the repo home page.</li>
+<li>View a recent diff by clicking on the button with the <em>SHA</em> or <em>hash</em> code (something like <code>6c0a5f1</code>).<ul>
+<li><strong>This is also useful for collaborators to see exactly what you changed.</strong></li>
+</ul>
+</li>
+<li>View the repository from a while back with the <code>&lt;&gt;</code> button.</li>
+<li>View the history of a file by clicking on the file, then clicking "History".</li>
+</ul>
+<p>Why version control? In addition to the awful "file naming conundrum" in the comic above,</p>
+<ul>
+<li>Don't fret removing stuff</li>
+<li>Leave a breadcrumb trail for troubleshooting</li>
+<li>"Undo" and navigate a previous state</li>
+<li>Helps you define your work</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Before we get to</p>
 <p>%todo 
 <a href="https://raw.githack.com/uo-ec607/lectures/master/02-git/02-Git.html#2">https://raw.githack.com/uo-ec607/lectures/master/02-git/02-Git.html#2</a>
 <a href="https://stat545guidebook.netlify.com/introduction-to-stat-545-and-github.html">https://stat545guidebook.netlify.com/introduction-to-stat-545-and-github.html</a></p>
@@ -232,22 +382,23 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Before-next-class">Before next class<a class="anchor-link" href="#Before-next-class"> </a></h2><ol>
-<li>Finish setting up our <a href="#Getting-started">programming stack</a> as described above</li>
+<li>Finish setting up our <a href="#Getting-started">programming stack</a> as described above - install Anaconda, Git, and GitHub Desktop. </li>
 <li>Update Anaconda<ul>
 <li>Open up Anaconda Powershell Prompt (on windows, or terminal on Mac) and type <code>conda update anaconda</code></li>
 </ul>
 </li>
-<li>Try to start the Jupyter Notebook (simply see if you can open it, then close it)<ul>
+<li>Test start the Jupyter Notebook (simply see if you can open it, then close it)<ul>
 <li>In Anaconda Powershell Prompt/terminal and type <code>jupyter notebook</code> and an internet tab should open with the url <code>http://localhost:8888</code> </li>
 <li>You can also open a Jupyter by opening <code>Anaconda Navigator</code> and then clicking on Jupyter, but I recommend using the Powershell Prompt, because getting comfortable with that will be helpful</li>
 </ul>
 </li>
 <li>Github<ul>
-<li>Sign up for a <a href="https://education.github.com/discount_requests/new">student discount</a>.</li>
+<li>Tell us what your username is by filling out this survey. <strong>%todo</strong></li>
 <li>Please add a profile photo on GitHub, to make our exchanges and community more personal (it's easier for classmates to ignore a "Twitter egg" than a smiling Mountain Hawk)</li>
+<li>Sign up for a <a href="https://education.github.com/discount_requests/new">student discount</a>.</li>
 </ul>
 </li>
-<li>Github practice: Set up confirmation / easy practice: create participation repo, fork the class's lectures %todo </li>
+<li>Github practice: Set up confirmation / easy practice: <a href="https://ledatascifi.github.io/participation/participation.html#setup">create a participation repo following these directions</a>. As a bonus, try to "fork" the <a href="https://github.com/LeDataSciFi/lectures-spr2020">class's lecture repo</a> and click around and explore it to find the lectures.</li>
 </ol>
 
 </div>
@@ -260,9 +411,9 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Credits">Credits<a class="anchor-link" href="#Credits"> </a></h2><ul>
-<li>QuantEcon.org</li>
+<li><a href="QuantEcon.org">QuantEcon.org</a></li>
 <li><a href="https://raw.githack.com/uo-ec607/lectures/master/01-intro/01-Intro.html#1">EC607</a></li>
-<li>stat545.stat.ubc.ca/</li>
+<li>The GitHub section, in particular, draws heavily (and replicates) on <a href="stat545.stat.ubc.ca/">STAT545</a></li>
 </ul>
 
 </div>
