@@ -13,7 +13,7 @@ prev_page:
 next_page:
   url: /01/02_Jupyter_Basics.html
 suffix: .ipynb
-search: github com repo git img li ledatascifi its class work participation account changes should src width version io anaconda repository python media giphy just page desktop file programming project code commit local org data html not valuable our issues new together button clicking course start gif never often using computer click while collaboration control min files repositories made master open www any ul want those why easier getting try things lectures assignments section get download watch cloud storage turn username user stat url email view jupyter next yes employers png skills jpg recent question always skill even again projects week
+search: github com repo img git li ledatascifi its participation work class account changes src width version io repository should new anaconda desktop commit python media giphy gif just issues page file local programming html not project code click files button clicking master org data any valuable often our together open course start never using computer assignments get cloud collaboration control min repositories clone www even again ul projects want those why easier getting try things lectures youre section while download watch might storage turn username user stat create url email cloning pull push view jupyter forking next yes employers png
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -151,7 +151,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <li><strong>Seriously, getting Python up and running has never been quicker, and we will have some working code soon!</strong></li>
 <li>You will be frustrated at times. This is natural! No programmer exists who has not cursed their computer to the depths of hell. <ul>
 <li>This is completely true: Half the time, it's a silly typo on line 42 of your code. Like, you literally misspelled "regression" as "regresion".</li>
-<li>Corollary: A lot of programming takes places after dark, under the influence of coffee and Red Bull. This is why you misspelled "regresion". Try to program at times when you have a clearer mind :)</li>
+<li>Corollary: A lot of programming takes place after dark, under the influence of coffee and Red Bull. This is why you misspelled "regresion". Try to program at times when you have a clearer mind :)</li>
 </ul>
 </li>
 <li>Overcoming those frustrating issues feels soooooo good. You'll feel a sense of accomplishment. Fight for that!</li>
@@ -207,7 +207,8 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Github">Github<a class="anchor-link" href="#Github"> </a></h2><p>We will be using <a href="https://github.com">GitHub</a> a lot in this course:</p>
+<h2 id="Github">Github<a class="anchor-link" href="#Github"> </a></h2><p><em><strong>Note: I use Windows and will be of less help for Mac users. The TA, however, uses Mac and will be more helpful when issues stem from OS differences. GitHub, in particular, might be finicky if you have outdated versions of Safari or any other browser.</strong></em></p>
+<p>We will be using <a href="https://github.com">GitHub</a> a lot in this course:</p>
 <ul>
 <li>All of your course-related work will go on GitHub.</li>
 <li>Discussion / help / announcements will happen on GitHub. (Yes, announcements!)</li>
@@ -216,6 +217,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 </ul>
 <p>But why GitHub? Because it's tremendously effective for developing a project. It is used by <a href="https://github.com/apple">Apple</a>, <a href="https://github.com/uber">Uber</a>, <a href="https://github.com/Netflix">Netflix</a>, Google, Microsoft, Bitcoin, CERN, Chinese censors (wait, what?), and many more large, sophisticated, multi-billion dollar entities.</p>
 <p>It's useful for (1) cloud storage, (2) collaboration, and (3) version control.</p>
+<p>Let's get started!</p>
 <h3 id="Register-a-GitHub-account">Register a GitHub account<a class="anchor-link" href="#Register-a-GitHub-account"> </a></h3><p>Your turn: <strong>Register for a free account on <a href="https://github.com">github.com</a>.</strong> <em>Give your username <a href="https://happygitwithr.com/github-acct.html#username-advice">some thought</a>.</em>  (Ideally, it should include your name.)</p>
 <h3 id="GitHub-as-cloud-storage-(4-min)">GitHub as cloud storage (4 min)<a class="anchor-link" href="#GitHub-as-cloud-storage-(4-min)"> </a></h3><p>At the very least, GitHub allows for cloud storage, like Google Drive and Dropbox do. There's a bit more structure than just storing files under your account:</p>
 <ul>
@@ -321,21 +323,24 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="GitHub-for-version-control-with-Git-(5-min)">GitHub for version control with Git (5 min)<a class="anchor-link" href="#GitHub-for-version-control-with-Git-(5-min)"> </a></h3><p>This is so important, I'm elevating this to a section header:</p>
-<h2 id="***-THE-WORKFLOW-RECIPE--***">*** THE WORKFLOW RECIPE  ***<a class="anchor-link" href="#***-THE-WORKFLOW-RECIPE--***"> </a></h2><p>To start a project:</p>
+<h2 id="***-THE-WORKFLOW-RECIPE--***">*** THE WORKFLOW RECIPE  ***<a class="anchor-link" href="#***-THE-WORKFLOW-RECIPE--***"> </a></h2><p>To start any project:</p>
 <ol>
-<li>Create a participation repo on GitHub and initialize with a README.</li>
+<li>Create a participation repo on GitHub (you can create a new one, fork or clone an existing one, or for assignments - be invited to one). If it's brand new, make sure to initialize the repo with a README. There is a <a href="https://ledatascifi.github.io/participation/participation.html#setup">gif here showing me opening a new repo</a>.</li>
 <li>Clone the repo to your local machine using GitHub desktop. </li>
 </ol>
+<p><img src="img/clone-to-local.gif" alt="word" title="cloning to local repo"></p>
 <p>Now, every time you want to work on the project:</p>
 <ol>
 <li>Pull the existing master repo into your local repo on your computer (just in case a change was made by others). GitHub Desktop calls this operation a "<strong>fetch</strong>" and Git calls this a "<strong>pull</strong>".</li>
 <li>Work on the project in the local repo (on your computer).</li>
-<li>"<strong>Stage</strong>" the files to tell Git about those changes. GitHub Desktop automatically see changes made in the local repo. (Nice!)</li>
-<li>"<strong>Commit</strong>" to the changes to tell Git, "yes, I want to do this, and what I did was [describe the changes]". In GitHub Desktop, this means adding a short summary and (optionally) a longer description. </li>
-<li>You "<strong>fetch</strong>"/"<strong>pull</strong>" changes made on the master repo down to your local repo, in case other GitHub users (or you on a different machine) made changes while you were working on step # 1. If there are any conflicts, you'll be notified and prompted to fix them. </li>
-<li>You "<strong>push</strong>" the commited local changes to the master GitHub repo.</li>
+<li>"<strong>Stage</strong>" the files to tell Git about those changes. GitHub Desktop automatically sees changes to files in the local repo when you save them and automatically “stages” them, by listing them as “changed” files in the left part of the screen. (Nice!)</li>
+<li>"<strong>Commit</strong>" to the changes to tell Git, "yes, I want to do this, and what I did was [describe the changes]". In GitHub Desktop, this means adding a short summary and (optionally) a longer description. Then click the <strong>"Commit to master"</strong> buttom. <strong>Do this early and often!!!</strong></li>
+<li>You’re almost ready to push the changes to cloud, but not yet! What if someone else (or you on a different machine) made changes to the master repo? Prevent issues by doing this step: "<strong>fetch</strong>"/"<strong>pull</strong>" from the master repo. (On GitHub Desktop for Windows, you click the "repository" menu and then "Pull".) If there are any conflicts, you’ll be notified and prompted to fix them. If there are conflicts, fix them!</li>
+<li>You "<strong>push</strong>" the commited local changes to the master GitHub repo by clicking the <strong>"Push origin"</strong> button! <strong>Do this early and often!!!</strong></li>
 </ol>
-<p>Repeat steps 3-6 often, but especially 3-4. You should push early and often. It's almost as important as hitting <code>CTRL+S</code> while working on a document.</p>
+<p>Even though steps 1 and 5 might seem pointless during solo projects, I encourage you to practice these good habits now, so that when you do collaborative work, you’re protected from mistakes.</p>
+<p>Again, commit and push often! It's almost as important as hitting <code>CTRL+S</code> while working on a document.</p>
+<p><img src="img/workflow-recipe.gif" alt="word2" title="workflow recipe"></p>
 <p>My turn: Demostrate some of the Git version control elements on GitHub</p>
 <ul>
 <li>Fact: Git only pushes/tracks the <em>changes</em> (called a <em>diff</em>) associated with a commit, so that it doesn't need to take a snapshot of all your files each time. </li>
@@ -376,24 +381,23 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Before-next-class">Before next class<a class="anchor-link" href="#Before-next-class"> </a></h2><ol>
-<li>Finish setting up our <a href="#Getting-started---Our-programming-stack">programming stack</a> as described above - install Anaconda, Git, and GitHub Desktop. </li>
-<li>Update Anaconda<ul>
-<li>Open up Anaconda Powershell Prompt (on windows, or terminal on Mac) and type <code>conda update anaconda</code></li>
+<li>Finish setting up our <a href="#Getting-started---Our-programming-stack">programming stack</a> as described above - install Anaconda, Git, and GitHub Desktop. <ul>
+<li>Update Anaconda: Open up Anaconda Powershell Prompt (on windows, or terminal on Mac) and type <code>conda update anaconda</code></li>
 </ul>
 </li>
 <li>Test start the Jupyter Notebook (simply see if you can open it, then close it)<ul>
-<li>In Anaconda Powershell Prompt/terminal and type <code>jupyter notebook</code> and an internet tab should open with the url <code>http://localhost:8888</code> </li>
-<li>You can also open a Jupyter by opening <code>Anaconda Navigator</code> and then clicking on Jupyter, but I recommend using the Powershell Prompt, because getting comfortable with that will be helpful</li>
+<li>Open Anaconda Powershell Prompt/terminal and type <code>jupyter notebook</code> and an internet tab should open with the url <code>http://localhost:8888</code> </li>
+<li><em>(You can also open a Jupyter by opening <code>Anaconda Navigator</code> and then clicking on Jupyter, but I recommend using the Powershell Prompt, because getting comfortable with that will be helpful)</em></li>
 </ul>
 </li>
 <li>Github<ul>
-<li>Tell us what your username is by filling out this survey. <strong>%todo</strong></li>
+<li>Tell us what <a href="https://forms.gle/brbs4DbAhzZqP7bj9">your username is by filling out this survey</a>.</li>
 <li>Please add a profile photo on GitHub, to make our exchanges and community more personal (it's easier for classmates to ignore a "Twitter egg" than a smiling Mountain Hawk)</li>
 <li>Sign up for a <a href="https://education.github.com/discount_requests/new">student discount</a>.</li>
 </ul>
 </li>
-<li>Github practice: Set up confirmation / easy practice: <a href="https://ledatascifi.github.io/participation/participation.html#setup">create a participation repo following these directions</a>. As a bonus, try to "fork" the <a href="https://github.com/LeDataSciFi/lectures-spr2020">class's lecture repo</a> and click around and explore it to find the lectures.<ul>
-<li>Note: "Forking" is different than "cloning" a repo. Cloning directly ties your local version to the original repo, while forking creates a copy on your GitHub (which you can then clone). Cloning makes it easier to fetch updates (and is often the best choice for new GitHub users), but forking has advantages too.</li>
+<li>Github practice: Set up confirmation / easy practice: <a href="https://ledatascifi.github.io/participation/participation.html#setup">create a participation repo following these directions</a>. As a bonus, try to "clone" the <a href="https://github.com/LeDataSciFi/lectures-spr2020">class's lecture repo</a> and click around and explore it to find the lectures.<ul>
+<li><em>(Note: You might see the term "Forking a repo". "Forking" is different than "cloning" a repo. Cloning directly ties your local version to the original repo, while forking creates a copy on your GitHub (which you can then clone). Cloning makes it easier to fetch updates (and is often the best choice for new GitHub users), but forking has advantages too.)</em></li>
 </ul>
 </li>
 </ol>
