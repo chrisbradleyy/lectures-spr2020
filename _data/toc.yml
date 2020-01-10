@@ -38,7 +38,7 @@
     url: "/01/02_Jupyter_Basics"
     subsections:
     - title: "A Simple Program"
-    url: /01/python-files/a-simple-program
+      url: /01/python-files/a-simple-program
 
   
 #    subsections:
