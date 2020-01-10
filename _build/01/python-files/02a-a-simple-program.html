@@ -11,7 +11,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: factor data stock returns t notebook loadings output pandas packages three sample plot return stocks basic document key start firms along model fama french models excess cumulative january simple program goal illustrate finance computations within markdown analous py file whose results logged produce youd copy paste into does both once point only illustration pay attention its structure flow get early glimpse just little bit seaborn few importing care python language quite small nimble easy maintain add functionality using external import calls should always top code acquire lot economic itself downloading websites through built apis youll learn means soon grab prices
+search: factor data file stock returns t ipynb output click loadings notebook pandas packages run page type above three sample plot return stocks simple program basic document results key flow start python should code raw open menu below firms along model fama french models excess cumulative january lecture yes webpage goal illustrate finance computations within markdown analous py whose logged produce youd copy paste into does both once point only illustration pay attention its structure get early glimpse just little bit seaborn few importing care language quite small nimble easy maintain add functionality using external import calls always top want try
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -23,10 +23,16 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="A-simple-program-(as-a-notebook)">A simple program (as a notebook)<a class="anchor-link" href="#A-simple-program-(as-a-notebook)"> </a></h1><p>The goal of this notebook is to illustrate basic finance computations within a markdown document. There is an analous .py file, whose results have to be logged. Then, to produce output, you'd have to copy and paste key output into a Word document. This notebook does both at once!</p>
+<h1 id="A-simple-program-(Yes,-this-webpage-is-a-.ipynb-file!)">A simple program (Yes, this webpage is a .ipynb file!)<a class="anchor-link" href="#A-simple-program-(Yes,-this-webpage-is-a-.ipynb-file!)"> </a></h1><p>The goal of this notebook is to illustrate basic finance computations within a markdown document. There is an analous .py file, whose results have to be logged. Then, to produce output, you'd have to copy and paste key output into a Word document. This notebook does both at once!</p>
 <p><em>The point of this notebook is ONLY illustration! Pay attention to its structure and flow, and get an early glimpse of just a little bit that we can do with <code>pandas</code>, <code>seaborn</code>, and a few other packages</em></p>
 <p>First, we start by importing key packages...</p>
 <p>The care Python language is quite small (nimble and easy to maintain), so we add functionality by using external packages. <strong>The import calls should always be at the top of your code!</strong></p>
+<h2 id="If-you-want-to-run-this-code-(and-you-should-try!)">If you want to run this code (and you should try!)<a class="anchor-link" href="#If-you-want-to-run-this-code-(and-you-should-try!)"> </a></h2><ol>
+<li>Download the <a href="https://raw.githubusercontent.com/LeDataSciFi/lectures-spr2020/master/content/01/python-files/02a-a-simple-program.ipynb">raw unrendered ipynb file here</a>. (On Windows, I click on the link, right-click on the page, and choose "Save Page As". Make sure the page downloads as an <code>ipynb</code> file type.) Put it in the same folder with the file you're working on already and then open it in Jupyter. </li>
+<li>Open terminal/powershell and type <code>pip install pandas_datareader</code> </li>
+<li>Click the "Kernel" menu above, then "Restart &amp; Clear Output". Now all the results below will disappear.</li>
+<li>Click the "Cell" menu above, then "Run All"</li>
+</ol>
 
 </div>
 </div>
@@ -42,7 +48,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas_datareader</span> <span class="k">as</span> <span class="nn">pdr</span> 
+<span class="kn">import</span> <span class="nn">pandas_datareader</span> <span class="k">as</span> <span class="nn">pdr</span> <span class="c1"># you might need to install this (see above)</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
@@ -97,13 +103,13 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>              AAPL         MSFT           VZ
-count  3528.000000  3528.000000  3528.000000
-mean      0.001195     0.000737     0.000501
-std       0.019995     0.016714     0.013021
+count  3529.000000  3529.000000  3529.000000
+mean      0.001195     0.000736     0.000503
+std       0.019993     0.016712     0.013019
 min      -0.179195    -0.117131    -0.080686
-25%      -0.008108    -0.007091    -0.006258
-50%       0.000951     0.000467     0.000697
-75%       0.011266     0.008476     0.007202
+25%      -0.008105    -0.007089    -0.006257
+50%       0.000952     0.000459     0.000701
+75%       0.011256     0.008471     0.007201
 max       0.139049     0.186047     0.146324
 </pre>
 </div>
@@ -181,7 +187,7 @@ C:\Users\DoLe\Anaconda3\lib\site-packages\statsmodels\nonparametric\kde.py:447: 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;seaborn.axisgrid.PairGrid at 0xc912f88&gt;</pre>
+<pre>&lt;seaborn.axisgrid.PairGrid at 0xc950048&gt;</pre>
 </div>
 
 </div>
@@ -327,7 +333,7 @@ Dep. Variable:            MSFT_excess   R-squared:                       0.533
 Model:                            OLS   Adj. R-squared:                  0.533
 Method:                 Least Squares   F-statistic:                     1331.
 Date:                Fri, 10 Jan 2020   Prob (F-statistic):               0.00
-Time:                        01:08:27   Log-Likelihood:                -5442.2
+Time:                        14:21:56   Log-Likelihood:                -5442.2
 No. Observations:                3501   AIC:                         1.089e+04
 Df Residuals:                    3497   BIC:                         1.092e+04
 Df Model:                           3                                         
@@ -361,7 +367,7 @@ Dep. Variable:            AAPL_excess   R-squared:                       0.380
 Model:                            OLS   Adj. R-squared:                  0.379
 Method:                 Least Squares   F-statistic:                     714.0
 Date:                Fri, 10 Jan 2020   Prob (F-statistic):               0.00
-Time:                        01:08:27   Log-Likelihood:                -6565.4
+Time:                        14:21:56   Log-Likelihood:                -6565.4
 No. Observations:                3501   AIC:                         1.314e+04
 Df Residuals:                    3497   BIC:                         1.316e+04
 Df Model:                           3                                         
@@ -395,7 +401,7 @@ Dep. Variable:              VZ_excess   R-squared:                       0.394
 Model:                            OLS   Adj. R-squared:                  0.393
 Method:                 Least Squares   F-statistic:                     757.6
 Date:                Fri, 10 Jan 2020   Prob (F-statistic):               0.00
-Time:                        01:08:27   Log-Likelihood:                -5024.3
+Time:                        14:21:56   Log-Likelihood:                -5024.3
 No. Observations:                3501   AIC:                         1.006e+04
 Df Residuals:                    3497   BIC:                         1.008e+04
 Df Model:                           3                                         
@@ -535,6 +541,17 @@ To register the converters:
 </div>
 </div>
 
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lecture-flow">Lecture flow<a class="anchor-link" href="#Lecture-flow"> </a></h2><p>Now please <a href="../02_Jupyter_Basics.html#Installing-libraries">go back</a> and finish the lecture.</p>
+
+</div>
+</div>
 </div>
 </div>
 
