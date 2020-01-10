@@ -1,0 +1,542 @@
+---
+interact_link: content/01/python-files/02a-a-simple-program.ipynb
+kernel_name: python3
+kernel_path: content/01/python-files
+has_widgets: false
+title: |-
+  A Simple Program
+pagenum: 4
+prev_page:
+  url: /01/02_Jupyter_Basics.html
+next_page:
+  url: 
+suffix: .ipynb
+search: factor data returns stock loadings output three stocks notebook basic document key start packages pandas sample firms along plot model fama french models return excess simple program goal illustrating finance computations within markdown corresponding py file whose results logged produce youd copy paste into does both once importing care python language quite small nimble easy maintain add functionality using external import calls should always top code acquire lot economic itself downloading websites through built apis youll learn means soon grab prices fims compute daily statistics visualization compare following figure reports pairwise correlations between distribution above table apple largest mean standard
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">A Simple Program</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="A-simple-program-(as-a-notebook)">A simple program (as a notebook)<a class="anchor-link" href="#A-simple-program-(as-a-notebook)"> </a></h1><p>The goal of this is to illustrating basic finance computations within a markdown document. There is a corresponding .py file, whose results have to be logged. Then, to produce output, you'd have to copy and paste key output into a Word document. This notebook does both at once!</p>
+<p>First, we start by importing key packages...</p>
+<p>The care Python language is quite small (nimble and easy to maintain), so we add functionality by using external packages. <strong>The import calls should always be at the top of your code!</strong></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas_datareader</span> <span class="k">as</span> <span class="nn">pdr</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data">Data<a class="anchor-link" href="#Data"> </a></h2><p>Pandas can acquire a lot of economic data itself, by downloading data from websites through built-in APIs. You'll learn what this means soon!</p>
+<p>First, we grab stock prices for three fims. Then we compute daily returns and output some basic statistics.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stock_prices</span> <span class="o">=</span> <span class="n">pdr</span><span class="o">.</span><span class="n">get_data_yahoo</span><span class="p">([</span><span class="s1">&#39;AAPL&#39;</span><span class="p">,</span><span class="s1">&#39;MSFT&#39;</span><span class="p">,</span><span class="s1">&#39;VZ&#39;</span><span class="p">],</span> <span class="n">start</span><span class="o">=</span><span class="mi">2006</span><span class="p">)</span>
+<span class="n">stock_prices</span> <span class="o">=</span> <span class="n">stock_prices</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s1">&#39;Adj Close&#39;</span><span class="p">)</span> <span class="c1"># reduce to just columns with this in the name</span>
+<span class="n">stock_prices</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;AAPL&#39;</span><span class="p">,</span><span class="s1">&#39;MSFT&#39;</span><span class="p">,</span><span class="s1">&#39;VZ&#39;</span><span class="p">]</span>
+
+<span class="n">daily_pct_change</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">stock</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;AAPL&#39;</span><span class="p">,</span><span class="s1">&#39;MSFT&#39;</span><span class="p">,</span><span class="s1">&#39;VZ&#39;</span><span class="p">]:</span>
+    <span class="n">daily_pct_change</span><span class="p">[</span><span class="n">stock</span><span class="p">]</span> <span class="o">=</span> <span class="n">stock_prices</span><span class="p">[</span><span class="n">stock</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">daily_pct_change</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>              AAPL         MSFT           VZ
+count  3528.000000  3528.000000  3528.000000
+mean      0.001195     0.000737     0.000501
+std       0.019995     0.016714     0.013021
+min      -0.179195    -0.117131    -0.080686
+25%      -0.008108    -0.007091    -0.006258
+50%       0.000951     0.000467     0.000697
+75%       0.011266     0.008476     0.007202
+max       0.139049     0.186047     0.146324
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-visualization---Compare-the-returns-of-sample-firms">Data visualization - Compare the returns of sample firms<a class="anchor-link" href="#Data-visualization---Compare-the-returns-of-sample-firms"> </a></h2><p>The following figure reports all of the pairwise correlations between the sample firms, along with the distribution of each.</p>
+<p>We know from the above table that Apple has the largest mean and standard deviation of the three. The plot type below is useful for seeing if the variables have non-linear relationships, strange outliers, fat tails, or other issues.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># we need this helper function for a plot</span>
+
+<span class="k">def</span> <span class="nf">plot_unity</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Adds a 45 degree line to the pairplot for plots off the diagonal</span>
+<span class="sd">    </span>
+<span class="sd">    Usage: </span>
+<span class="sd">    grid=sns.pairplot( &lt;call pairplot as you want &gt;  )</span>
+<span class="sd">    grid.map_offdiag(plot_unity)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">mn</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">xdata</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">ydata</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+    <span class="n">mx</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">xdata</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">ydata</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">mn</span><span class="p">,</span> <span class="n">mx</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+     
+<span class="c1"># compare the return distribution of 3 firms visually...</span>
+    
+<span class="n">grid</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">daily_pct_change</span><span class="p">,</span><span class="n">diag_kind</span><span class="o">=</span><span class="s1">&#39;kde&#39;</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;reg&quot;</span><span class="p">)</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">map_offdiag</span><span class="p">(</span><span class="n">plot_unity</span><span class="p">)</span> <span class="c1"># how cool is that!</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Users\DoLe\Anaconda3\lib\site-packages\statsmodels\nonparametric\kde.py:447: RuntimeWarning: invalid value encountered in greater
+  X = X[np.logical_and(X &gt; clip[0], X &lt; clip[1])] # won&#39;t work for two columns.
+C:\Users\DoLe\Anaconda3\lib\site-packages\statsmodels\nonparametric\kde.py:447: RuntimeWarning: invalid value encountered in less
+  X = X[np.logical_and(X &gt; clip[0], X &lt; clip[1])] # won&#39;t work for two columns.
+</pre>
+</div>
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;seaborn.axisgrid.PairGrid at 0xc912f88&gt;</pre>
+</div>
+
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../../images/01/python-files/02a-a-simple-program_5_2.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Factor-loadings">Factor loadings<a class="anchor-link" href="#Factor-loadings"> </a></h2><p>A core task in asset pricing is calculating the beta of a stock, along with loadings on other factors. The canonical model is the Fama-French 3 factor model, though 4 and 5 factor models are more popular nowadays.</p>
+<h3 id="Merge-data-on-factor-loadings-with-stock-return-data">Merge data on factor loadings with stock return data<a class="anchor-link" href="#Merge-data-on-factor-loadings-with-stock-return-data"> </a></h3><p>We start by grabbing factor returns from Ken French's website, again via pandas API.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ff</span> <span class="o">=</span> <span class="n">pdr</span><span class="o">.</span><span class="n">get_data_famafrench</span><span class="p">(</span><span class="s1">&#39;F-F_Research_Data_5_Factors_2x3_daily&#39;</span><span class="p">,</span><span class="n">start</span><span class="o">=</span><span class="mi">2006</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># the [0] is because the imported obect is a dictionary, and key=0 is the dataframe</span>
+<span class="n">ff</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Mkt-RF&quot;</span><span class="p">:</span><span class="s2">&quot;mkt_excess&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># cleaner name</span>
+<span class="n">ff</span> <span class="o">=</span> <span class="n">ff</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">daily_pct_change</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span> <span class="c1"># merge with stock returns</span>
+<span class="k">for</span> <span class="n">stock</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;MSFT&#39;</span><span class="p">,</span><span class="s1">&#39;AAPL&#39;</span><span class="p">,</span><span class="s1">&#39;VZ&#39;</span><span class="p">]:</span>    
+    <span class="n">ff</span><span class="p">[</span><span class="n">stock</span><span class="p">]</span> <span class="o">=</span> <span class="n">ff</span><span class="p">[</span><span class="n">stock</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span> <span class="c1"># FF store variables as percents, so convert to that</span>
+    <span class="n">ff</span><span class="p">[</span><span class="n">stock</span><span class="o">+</span><span class="s1">&#39;_excess&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ff</span><span class="p">[</span><span class="n">stock</span><span class="p">]</span> <span class="o">-</span> <span class="n">ff</span><span class="p">[</span><span class="s1">&#39;RF&#39;</span><span class="p">]</span> <span class="c1"># convert to excess returns in prep for regressions</span>
+<span class="c1">#print(ff.describe()) # ugly...</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.float_format&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span> <span class="c1"># show fewer digits</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_columns</span> <span class="o">=</span> <span class="n">ff</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># show more columns</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ff</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span><span class="p">))</span> <span class="c1"># better!</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>       mkt_excess     SMB     HML     RMW     CMA      RF    AAPL    MSFT  \
+count     3502.00 3502.00 3502.00 3502.00 3502.00 3502.00 3501.00 3501.00   
+mean         0.04    0.00   -0.01    0.01    0.00    0.00    0.12    0.07   
+std          1.20    0.57    0.66    0.36    0.31    0.01    2.00    1.68   
+min         -8.95   -3.40   -4.24   -2.62   -1.74    0.00  -17.92  -11.71   
+25%         -0.40   -0.33   -0.31   -0.19   -0.18    0.00   -0.82   -0.71   
+50%          0.08    0.00   -0.03    0.01   -0.01    0.00    0.09    0.04   
+75%          0.56    0.33    0.26    0.21    0.17    0.01    1.12    0.85   
+max         11.35    4.49    4.83    1.95    1.96    0.02   13.90   18.60   
+
+           VZ  MSFT_excess  AAPL_excess  VZ_excess  
+count 3501.00      3501.00      3501.00    3501.00  
+mean     0.05         0.07         0.11       0.05  
+std      1.31         1.68         2.00       1.31  
+min     -8.07       -11.71       -17.93      -8.07  
+25%     -0.63        -0.72        -0.82      -0.63  
+50%      0.07         0.04         0.09       0.07  
+75%      0.72         0.85         1.12       0.72  
+max     14.63        18.60        13.90      14.63  
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Now-we-run-the-models.">Now we run the models.<a class="anchor-link" href="#Now-we-run-the-models."> </a></h3><p>We loop over the stocks, and for each stock, we regress the stock's excess returns on a market (excess) return factor, the size factor "SMB" and the value factor "HML" (see Fama and French (1993)).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># run the models- </span>
+<span class="n">params</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">stock</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;MSFT&#39;</span><span class="p">,</span><span class="s1">&#39;AAPL&#39;</span><span class="p">,</span><span class="s1">&#39;VZ&#39;</span><span class="p">]:</span>        
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">40</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">stock</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">40</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">formula</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="n">stock</span><span class="o">+</span><span class="s2">&quot;_excess ~ mkt_excess + SMB + HML&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">ff</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+    <span class="n">params</span><span class="p">[</span><span class="n">stock</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">params</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+
+
+ ======================================== 
+ MSFT 
+ ======================================== 
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            MSFT_excess   R-squared:                       0.533
+Model:                            OLS   Adj. R-squared:                  0.533
+Method:                 Least Squares   F-statistic:                     1331.
+Date:                Fri, 10 Jan 2020   Prob (F-statistic):               0.00
+Time:                        01:08:27   Log-Likelihood:                -5442.2
+No. Observations:                3501   AIC:                         1.089e+04
+Df Residuals:                    3497   BIC:                         1.092e+04
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.0236      0.019      1.217      0.224      -0.014       0.062
+mkt_excess     1.1043      0.018     62.865      0.000       1.070       1.139
+SMB           -0.3962      0.035    -11.221      0.000      -0.465      -0.327
+HML           -0.4470      0.031    -14.398      0.000      -0.508      -0.386
+==============================================================================
+Omnibus:                      836.860   Durbin-Watson:                   2.005
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            40286.368
+Skew:                          -0.251   Prob(JB):                         0.00
+Kurtosis:                      19.611   Cond. No.                         2.27
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+
+
+ ======================================== 
+ AAPL 
+ ======================================== 
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            AAPL_excess   R-squared:                       0.380
+Model:                            OLS   Adj. R-squared:                  0.379
+Method:                 Least Squares   F-statistic:                     714.0
+Date:                Fri, 10 Jan 2020   Prob (F-statistic):               0.00
+Time:                        01:08:27   Log-Likelihood:                -6565.4
+No. Observations:                3501   AIC:                         1.314e+04
+Df Residuals:                    3497   BIC:                         1.316e+04
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.0676      0.027      2.532      0.011       0.015       0.120
+mkt_excess     1.0965      0.024     45.289      0.000       1.049       1.144
+SMB           -0.1288      0.049     -2.647      0.008      -0.224      -0.033
+HML           -0.4265      0.043     -9.969      0.000      -0.510      -0.343
+==============================================================================
+Omnibus:                      651.193   Durbin-Watson:                   1.940
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            10938.202
+Skew:                           0.389   Prob(JB):                         0.00
+Kurtosis:                      11.624   Cond. No.                         2.27
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+
+
+ ======================================== 
+ VZ 
+ ======================================== 
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              VZ_excess   R-squared:                       0.394
+Model:                            OLS   Adj. R-squared:                  0.393
+Method:                 Least Squares   F-statistic:                     757.6
+Date:                Fri, 10 Jan 2020   Prob (F-statistic):               0.00
+Time:                        01:08:27   Log-Likelihood:                -5024.3
+No. Observations:                3501   AIC:                         1.006e+04
+Df Residuals:                    3497   BIC:                         1.008e+04
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.0213      0.017      1.236      0.217      -0.012       0.055
+mkt_excess     0.6924      0.016     44.411      0.000       0.662       0.723
+SMB           -0.3494      0.031    -11.150      0.000      -0.411      -0.288
+HML            0.0805      0.028      2.923      0.003       0.027       0.135
+==============================================================================
+Omnibus:                      770.293   Durbin-Watson:                   1.910
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            12316.887
+Skew:                           0.603   Prob(JB):                         0.00
+Kurtosis:                      12.109   Cond. No.                         2.27
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Estimated-factor-loadings">Estimated factor loadings<a class="anchor-link" href="#Estimated-factor-loadings"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.float_format&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span> <span class="c1"># show fewer digits</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>              MSFT    AAPL      VZ
+Intercept   0.0236  0.0676  0.0213
+mkt_excess  1.1043  1.0965  0.6924
+SMB        -0.3962 -0.1288 -0.3494
+HML        -0.4470 -0.4265  0.0805
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Plot-the-cumulative-returns-of-the-three-stocks">Plot the cumulative returns of the three stocks<a class="anchor-link" href="#Plot-the-cumulative-returns-of-the-three-stocks"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># plot the cummulative returns... NOTE: excludes dividends and splits!</span>
+<span class="n">cumrets</span><span class="o">=</span><span class="p">(</span><span class="n">daily_pct_change</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span> <span class="c1"># clear the prior plot before starting a new one</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">cumrets</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Returns, ex-dividends&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Users\DoLe\Anaconda3\lib\site-packages\pandas\plotting\_matplotlib\converter.py:103: FutureWarning: Using an implicitly registered datetime converter for a matplotlib plotting method. The converter was registered by pandas on import. Future versions of pandas will require you to explicitly register matplotlib converters.
+
+To register the converters:
+	&gt;&gt;&gt; from pandas.plotting import register_matplotlib_converters
+	&gt;&gt;&gt; register_matplotlib_converters()
+  warnings.warn(msg, FutureWarning)
+</pre>
+</div>
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="../../images/01/python-files/02a-a-simple-program_13_1.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
