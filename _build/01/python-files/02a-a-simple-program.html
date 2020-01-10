@@ -11,7 +11,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: factor data returns stock loadings output three stocks notebook basic document key start packages pandas sample firms along plot model fama french models return excess simple program goal illustrating finance computations within markdown corresponding py file whose results logged produce youd copy paste into does both once importing care python language quite small nimble easy maintain add functionality using external import calls should always top code acquire lot economic itself downloading websites through built apis youll learn means soon grab prices fims compute daily statistics visualization compare following figure reports pairwise correlations between distribution above table apple largest mean standard
+search: factor data stock returns t notebook loadings output pandas packages three sample plot return stocks basic document key start firms along model fama french models excess cumulative january simple program goal illustrate finance computations within markdown analous py file whose results logged produce youd copy paste into does both once point only illustration pay attention its structure flow get early glimpse just little bit seaborn few importing care python language quite small nimble easy maintain add functionality using external import calls should always top code acquire lot economic itself downloading websites through built apis youll learn means soon grab prices
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -23,7 +23,8 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="A-simple-program-(as-a-notebook)">A simple program (as a notebook)<a class="anchor-link" href="#A-simple-program-(as-a-notebook)"> </a></h1><p>The goal of this is to illustrating basic finance computations within a markdown document. There is a corresponding .py file, whose results have to be logged. Then, to produce output, you'd have to copy and paste key output into a Word document. This notebook does both at once!</p>
+<h1 id="A-simple-program-(as-a-notebook)">A simple program (as a notebook)<a class="anchor-link" href="#A-simple-program-(as-a-notebook)"> </a></h1><p>The goal of this notebook is to illustrate basic finance computations within a markdown document. There is an analous .py file, whose results have to be logged. Then, to produce output, you'd have to copy and paste key output into a Word document. This notebook does both at once!</p>
+<p><em>The point of this notebook is ONLY illustration! Pay attention to its structure and flow, and get an early glimpse of just a little bit that we can do with <code>pandas</code>, <code>seaborn</code>, and a few other packages</em></p>
 <p>First, we start by importing key packages...</p>
 <p>The care Python language is quite small (nimble and easy to maintain), so we add functionality by using external packages. <strong>The import calls should always be at the top of your code!</strong></p>
 
@@ -476,7 +477,10 @@ HML        -0.4470 -0.4265  0.0805
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Plot-the-cumulative-returns-of-the-three-stocks">Plot the cumulative returns of the three stocks<a class="anchor-link" href="#Plot-the-cumulative-returns-of-the-three-stocks"> </a></h2>
+<h2 id="Plot-the-cumulative-returns-of-the-three-stocks">Plot the cumulative returns of the three stocks<a class="anchor-link" href="#Plot-the-cumulative-returns-of-the-three-stocks"> </a></h2><p>Finally, I plot the cumulative return from January 1, 2006 until January 2020 by computing for each stock $i$</p>
+<p>$cumret(i,T)=\prod^T_{t=0} (1+r_{i,t})$</p>
+<p>where $T$ is a date and $t=0$ corresponds to the beginning of the sample.</p>
+
 </div>
 </div>
 </div>
@@ -489,8 +493,7 @@ HML        -0.4470 -0.4265  0.0805
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># plot the cummulative returns... NOTE: excludes dividends and splits!</span>
-<span class="n">cumrets</span><span class="o">=</span><span class="p">(</span><span class="n">daily_pct_change</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cumrets</span><span class="o">=</span><span class="p">(</span><span class="n">daily_pct_change</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span> <span class="c1"># clear the prior plot before starting a new one</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">cumrets</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Returns, ex-dividends&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
