@@ -36,6 +36,10 @@
     not_numbered: false  
   - title: "Jupyter Basics"
     url: "/01/02_Jupyter_Basics"
+    subsections:
+    - title: "A Simple Program"
+    url: /01/python-files/a-simple-program
+
   
 #    subsections:
 #    - url: /01/3/subsection/subsections
