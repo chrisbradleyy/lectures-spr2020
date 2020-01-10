@@ -13,7 +13,7 @@ prev_page:
 next_page:
   url: /01/python-files/02a-a-simple-program.html
 suffix: .ipynb
-search: python jupyter file code notebook cell help html open command github ipython files documentation py com new io into copy class tab here save mode commands simple program folder comments run magic lets media going just ledatascifi working type where want computer participation data object text page through resources anaconda menu location paste click br right li jakevdp science completion giphy load test start means e practice important install powershell should why below insert keyboard pythondatasciencehandbook gif package repo work output after much get later youll not back directory terminal create firstpythoncode g quickly shell web need check under useful
+search: python jupyter code file notebook cell help html open command github ipython files documentation py com new io into working folder copy class type tab here save mode commands test simple just program where comments run magic lets media going ledatascifi directory location want computer participation data load object text page through resources anaconda menu paste click br right li jakevdp science completion giphy pwd start means e practice important install powershell should why need below insert keyboard pythondatasciencehandbook its gif package repo work output after much get later youll inside not back terminal create firstpythoncode path g quickly shell
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -507,9 +507,17 @@ foobar
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-file-isn't-in-my-PWD!">The file isn't in my PWD!<a class="anchor-link" href="#The-file-isn't-in-my-PWD!"> </a></h2><ol>
-<li>Move the file into the PWD: (A) Copy/paste between folders on your computer  (B) Use the "Upload button" in IPython's dashboard (the page that opened up when you started IPython).</li>
+<h2 id="The-file-isn't-in-my-(current)-working-directory!">The file isn't in my (current) working directory!<a class="anchor-link" href="#The-file-isn't-in-my-(current)-working-directory!"> </a></h2><p>For example, if your code is in <code>\Documents\</code> and you try to load <code>test.doc</code> and it's in the same folder, all is well. But if <code>test.doc</code> is inside your English Class's folder (<code>\Documents\ENG101\</code>), then the code can't see the file and will produce an error.</p>
+<p>The working directory is where your python code "thinks it is". You can type <code>pwd</code> to find out the working directory.</p>
+<p>If a file you need isn't in the PWD, you have a few options:</p>
+<ol>
+<li>Move the file into the PWD: <ul>
+<li>Copy/paste between folders on your computer  </li>
+<li>If you haven't changed the PWD, then it's wherever your code is (typically). Use the "Upload button" in IPython's dashboard to upload the file to that location (the page that opened up when you started IPython).</li>
+</ul>
+</li>
 <li>Change the PWD to where the file is: Use the <code>cd "&lt;path to folder&gt;"</code> command. (Hint: You can use tab completion to type the path out faster!)</li>
+<li><s> Type the full path to the file <code> C:\Documents\ENG101\test.doc </code> </s>. Just kidding, try to NEVER do that!</li>
 </ol>
 
 </div>
