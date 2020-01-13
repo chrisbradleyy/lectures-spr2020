@@ -13,7 +13,7 @@ prev_page:
 next_page:
   url: /01/python-files/02a-a-simple-program.html
 suffix: .ipynb
-search: python jupyter code file notebook cell help html open command github ipython files documentation py com new io into working folder copy class type tab here save mode commands test simple just program where comments run magic lets media going ledatascifi directory location want computer participation data load object text page through resources anaconda menu paste click br right li jakevdp science completion giphy pwd start means e practice important install powershell should why need below insert keyboard pythondatasciencehandbook its gif package repo work output after much get later youll inside not back terminal create firstpythoncode path g quickly shell
+search: python jupyter code file notebook cell help html open command github ipython files documentation py com new io folder copy into working class type tab here save mode commands test simple just program where want click comments run magic lets media going ledatascifi directory location computer right participation data load object text page through resources install anaconda menu path paste br li jakevdp science completion giphy pwd start means get e practice important powershell should why need below insert keyboard pythondatasciencehandbook its gif repo work users output after much later youll inside not back create firstpythoncode g name quickly shell
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -31,7 +31,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <li>free and open source</li>
 <li>has simple syntax</li>
 <li>object oriented: EVERYTHING IS AN OBJECT</li>
-<li>popular among the largest tech firms in the world: Google, Amazon, Uber, Dropboz, Reddit, Youtube, ...</li>
+<li>popular among the largest tech firms in the world: Google, Amazon, Uber, Dropbox, Reddit, Youtube, ...</li>
 <li>popular in the scientific community: academia, NASA, CERN, Wall Street, ...</li>
 </ul>
 <p>Jupyter (Notebook) aka IPython</p>
@@ -106,7 +106,10 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <h2 id="How-I-open-Jupyter-Notebook:">How I open Jupyter Notebook:<a class="anchor-link" href="#How-I-open-Jupyter-Notebook:"> </a></h2><p>Navigating from the default location Jupyter where opens to a folder/director where a python file actually is, or where you want it to be, can be annoying. So what I usually do to open Jupyter is:</p>
 <ol>
 <li>Navigate on your computer to the folder you want to work in/where the Py file is. Often, you'll create a new folder specific to the project. Let's call today's project "FirstPythonCode" and create a folder for it. You can put it wherever you want. </li>
-<li>Find the full path to the folder, e.g. <code>C:\Users\Don\FirstPythonCode</code></li>
+<li>Find the full path to the folder, e.g. <code>C:\Users\Don\FirstPythonCode</code><ul>
+<li>To get the path name in Mac: right click the folder, hold down the option key, and then click "Copy as path name"</li>
+</ul>
+</li>
 <li>In Terminal or Powershell type <code>jupyter notebook --notebook-dir "C:\Users\Don\FirstPythonCode"</code> <ul>
 <li>Here the <code>--notebook-dir</code> means that we are opening Jupyter but want to choose the notebook location, and then we type the location.</li>
 <li>I have this command (<code>jupyter notebook --notebook-dir</code>) pasted into a note on my computer so I can quickly copy and paste it into the shell. </li>
@@ -190,7 +193,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 </ul>
 </li>
 <li>Add a new cell below by <em><strong>clicking</strong></em> "Insert" &gt; "Insert Cell Below".</li>
-<li>Add a new cell below by <em><strong>keyboard shortcut</strong></em>. To do that, we need a quick disgression on Jupyter's modal editing system. Check out the popout to the right. </li>
+<li>Add a new cell below by <em><strong>keyboard shortcut</strong></em>. To do that, we need a quick digression on Jupyter's modal editing system. Check out the popout to the right. </li>
 </ol>
 
 </div>
@@ -340,9 +343,9 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <h2 id="Installing-libraries">Installing libraries<a class="anchor-link" href="#Installing-libraries"> </a></h2><p>The Anaconda distribution we installed also installed most of the key data science Python libraries/packages we will use throughout the semester. In the event you need to install a new package to add functionality to Python, e.g. <code>matplotlib</code> (which you already have!), you can</p>
 <ol>
 <li>Open Anaconda Powershell (Windows) or Terminal (Mac) or Jupyter (yes!)</li>
-<li><code>pip install matplotlib</code> will install the package.  Use <code>%pip install matplotlib</code> if you're in Jupyter. </li>
+<li><code>pip install matplotlib</code> will install the package. (If you want to install it from Jupyter, use <code>%pip install matplotlib</code>.)</li>
 </ol>
-<p>Some package can't be <code>pip</code> installed, but hopefully you won't need to deal with that this semester, so I'm going to skip discussion of such package installs.</p>
+<p>Some packages can't be <code>pip</code> installed, but hopefully you won't need to deal with that this semester, so I'm going to skip discussion of such package installs.</p>
 
 </div>
 </div>
@@ -353,7 +356,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Working-with-files">Working with files<a class="anchor-link" href="#Working-with-files"> </a></h1><p>Jupyter files have a <code>.ipynb</code> file extension. The standard Python file extension is <code>.py</code> and you will sometimes want to run code in (or the entire code in) a <code>py</code> file. You can either:</p>
+<h1 id="Working-with-files">Working with files<a class="anchor-link" href="#Working-with-files"> </a></h1><p>Jupyter files have a <code>.ipynb</code> file extension. The standard Python file extension is <code>.py</code> and you will sometimes want to run code from a <code>py</code> file. You can either:</p>
 <ol>
 <li>Open the .py file itself and <strong>execute it directly in Jupyter</strong> </li>
 <li>Open the .py file in Jupyter or a text editor, and then <strong>copy and paste the code into a Jupyter cell</strong> (reminder: make sure it's a "code" cell, not a "Markdown" cell!)</li>
@@ -532,7 +535,7 @@ foobar
 <h1 id="Ending-class">Ending class<a class="anchor-link" href="#Ending-class"> </a></h1><h2 id="Save-your-live-coding-file,-then-upload-it-to-the-participation-repo">Save your live coding file, then upload it to the participation repo<a class="anchor-link" href="#Save-your-live-coding-file,-then-upload-it-to-the-participation-repo"> </a></h2><ol>
 <li><code>CTRL+S</code> or <code>apple+S</code> will save the notebook.</li>
 <li>Find the file on your computer. Then open your participation repo on GitHub. Make sure you're logged in.</li>
-<li>Then you can drag the file onto the repo. Add a comment then click "commit changes", and viola!</li>
+<li>Then you can drag the file onto the repo. Add a comment then click "commit changes", and voila!</li>
 </ol>
 <h2 id="Reminder:-Drop-in-hours">Reminder: Drop-in hours<a class="anchor-link" href="#Reminder:-Drop-in-hours"> </a></h2><p><a href="https://ledatascifi.github.io/#student-drop-in-hours">They are listed here</a>.</p>
 
@@ -547,7 +550,7 @@ foobar
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Before-next-class">Before next class<a class="anchor-link" href="#Before-next-class"> </a></h2><ol>
 <li>After class: Upload the notebook you've been playing with into your participation repo. </li>
-<li>Writing commands into Terminal/Powershell can be slow. Would you like to be able to copy and paste? Doesn't that sound faster? Then activate it! So <ol>
+<li><strong>Windows</strong> users: Writing commands into Powershell can be slow. Would you like to be able to copy and paste? Doesn't that sound faster? Then activate it! So <ol>
 <li>Right click on the title bar of the Anaconda Powershell Prompt</li>
 <li>Select Defaults</li>
 <li>Under "Edit Options", select all the boxes.</li>

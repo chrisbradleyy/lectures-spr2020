@@ -1,0 +1,1305 @@
+---
+redirect_from:
+  - "/01/03-digging-into-py"
+interact_link: content/01/03_Digging_into_Py.ipynb
+kernel_name: python3
+kernel_path: content/01
+has_widgets: false
+title: |-
+  Py Basics
+pagenum: 5
+prev_page:
+  url: /01/python-files/02a-a-simple-program.html
+next_page:
+  url: 
+suffix: .ipynb
+search: code python object print jupyter github not class function com above list returns into media giphy open data example want true line block spyder file through jakevdp point whirlwindtourofpython built called ipynb functions note set lines condition markdown debugging might should run false statements org arguments objects state states issue files repo must read notebook here any method sns after next element capitol gif me computer participation learn try large much e logic need variables nbviewer blob master syntax lists program just loop dont help packages youve let name before practice whirlwind execute cheat html games via copy parentheses g
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Py Basics</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Digging-into-Py,-and-Authoring">Digging into Py, and Authoring<a class="anchor-link" href="#Digging-into-Py,-and-Authoring"> </a></h1><p>Hopefully this goes better than Chrissy Teigen's experience:</p>
+<p><img src="https://media.giphy.com/media/zlXkHKnCXAe9a/giphy.gif" alt=""></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="First-things-first">First things first<a class="anchor-link" href="#First-things-first"> </a></h2><ol>
+<li>The assignment was posted. If you haven't received an email, please let me or the TA know immediately by tagging us in a GitHub issue. </li>
+<li><strong>Open a folder on your computer with your participation files, open Jupyter to that location, and create a new python file. Name it "Class 2 live coding".</strong><ul>
+<li>Going forward, have Jupyter opened to your participation repo before the start of every class. This is an interactive class, and will be all semester!</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Outline">Outline<a class="anchor-link" href="#Outline"> </a></h2><ol>
+<li>Learning by doing</li>
+<li>Python essentials</li>
+<li>Debugging </li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reminders">Reminders<a class="anchor-link" href="#Reminders"> </a></h2><p>You can't learn programmatic material in class, try though I might to make it possible. You can only learn through practice  practice. You should be checking out tutorials and lessons online in your free time. My "best" suggestion would be:</p>
+<ul>
+<li><strong>Absolute must do: Go through #3 to #14 of <a href="https://github.com/jakevdp/WhirlwindTourOfPython">A Whirlwind Tour of Python</a>.</strong> These are short (read--&gt;fast) but clear and comprehensive and will introduce you to virtually all of the key components of coding we will do this semester. </li>
+<li>As you go through that, have one large python notebook open, and simultaneously write and execute code as the book discusses it. <ul>
+<li>You will learn much faster by replicating and doing that than "reading, and hoping it sticks". </li>
+<li>This will become your personal "cheat sheet". Of course, there are more cheat sheets on the <a href="https://ledatascifi.github.io/studentresourcevert/resource-landing.html">resources page</a>.</li>
+</ul>
+</li>
+<li>Prefer to learn through games? That's how I learned python! (I built solvers for Sudoku and the Cracker Barrel golf tee game... Both taught me a LOT about programming in python, problem solving strategies, and data structures.) Some simpler games:<ul>
+<li><a href="https://edabit.com/">Edabit</a> has a bunch of games. If you log in, you can search for python challenges that take from 1 minute to ... longer... For example, <a href="https://edabit.com/challenge/cx7eFvQBzjauLgwgZ">the Museum of Dull Things</a>. If you find an games illuminating, please let me know via the class discussions repo!</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Python-essentials">Python essentials<a class="anchor-link" href="#Python-essentials"> </a></h2><p>Ok, now we are going to live code a bunch together. I want you to get comfortable typing commands yourself rather than copy-pasting. This is slightly more painful in the beginning, but much better payoff in the long-run.</p>
+<h3 id="Arithmetic">Arithmetic<a class="anchor-link" href="#Arithmetic"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># YOU: TYPE ALL OF THESE OUT ON YOUR OTHER PARTICIPATION SHEET... YOU CAN OMIT THE COMMENTS IF YOU WANT</span>
+<span class="c1"># YOU: TRY VARIATIONS TOO...</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># addition</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># subtraction</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># division - in Python 3, division of integers (a data type) inherently returns floats (a data type)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># see?</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">//</span><span class="mi">3</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="mi">2</span><span class="o">//</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># floor division returns an integer. </span>
+<span class="c1"># FOR YOU to try: use this to tell me how many full hours are in 7643 minutes?</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">%</span><span class="k">3</span>) # mod operator
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># multiplication</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># 2 to the power of three</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">^</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># ^ is NOT the power operator!!! it is a &#39;bit&#39; operator - you don&#39;t need to know this for now</span>
+
+<span class="nb">int</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="mi">4</span><span class="o">+</span><span class="mi">15</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># 1. PEMDAS applies </span>
+                  <span class="c1"># 2. If the last command in a cell return an *object*, jupyter auto prints it w/o needing print()</span>
+                  <span class="c1"># 3. this should be a float (21.0), but you can convert a float to an int with the int() function</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Parentheses---Grouping-and-Calling">Parentheses - Grouping and Calling<a class="anchor-link" href="#Parentheses---Grouping-and-Calling"> </a></h3><p>As the above example shows, parentheses are for <strong>grouping</strong> (<code>(4+15)/3</code> forces addition before division) and <strong>calling</strong> a function (e.g. <code>print()</code> means the <code>print</code> function is called on the inputs inside the parentheses).</p>
+<h3 id="Logic-and-comparisons">Logic and comparisons<a class="anchor-link" href="#Logic-and-comparisons"> </a></h3><p>The <strong>comparison operators</strong> are <code>==</code> (equals), <code>!=</code> (Not equal), <code>&gt;</code> (greater than), <code>&gt;=</code> (equal or greater than), <code>&lt;</code>, and <code>&lt;=</code>. Each of these prompts Python to <strong>evaluate the truth</strong> of the comparison and return <code>True</code> or <code>False</code>.</p>
+<p><code>True</code> and <code>False</code> are booleans, meaning <code>True</code> is equal to 1, and <code>False</code> is equal to 0.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># YOU: TYPE ALL OF THESE OUT ON YOUR OTHER PARTICIPATION SHEET... YOU CAN OMIT THE COMMENTS IF YOU WANT</span>
+<span class="c1"># YOU: TRY VARIATIONS TOO...</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span>            <span class="c1"># 1 is not greater than 2, so this evaluates to...</span>
+                      <span class="c1"># YOU: try 2 of the 3 other comparison operators</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>      
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="kc">True</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="kc">False</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="kc">False</span><span class="p">))</span> <span class="c1"># print() can print a sequence of objects </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>logic operators</strong> are <code>and</code>, <code>or</code>, and <code>not</code>. They evaluate a sequence of statements and return a true or false boolean.</p>
+<p><em><strong>What does <code>or</code> mean?</strong></em> In common parlance, <code>or</code> usually means "Do you want A or do you want B? (pick one)". Mathematically, <code>or</code> works like a dad joke - You: "Dad, are we rich or poor?" Dad: "Yes".</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># YOU: TYPE ALL OF THESE OUT ON YOUR OTHER PARTICIPATION SHEET... YOU CAN OMIT THE COMMENTS IF YOU WANT</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>              <span class="c1"># you assign variables by writing: VariableName = Thing. </span>
+<span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span>        <span class="c1"># if both sides of *and* are true, the whole thing is</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">or</span> <span class="n">b</span><span class="p">)</span>         <span class="c1"># if either side of *or* is true, the whole thing is</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">b</span><span class="p">)</span>    <span class="c1"># *not* negates what is after it</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">a</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># not a is true, so the whole thing is true</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>membership operators</strong> <code>in</code> and <code>not in</code> check whether the left object is or is not in the object on the right side.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># try these... what do you get?</span>
+<span class="n">a</span><span class="o">=</span><span class="mi">3</span>
+<span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">in</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span> <span class="ow">in</span> <span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>identity operators</strong> <code>is</code> and <code>is not</code> check whether the left side and the right side are the same object.</p>
+<p><strong>WARNING: <code>is</code> and <code>==</code> are NOT the same!!!*</strong> Here is an example <a href="https://www.geeksforgeeks.org/difference-operator-python/">borrowed from G4G</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[]</span> 
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[]</span> 
+<span class="n">list3</span><span class="o">=</span><span class="n">list1</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span> <span class="o">==</span> <span class="n">list2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span> <span class="ow">is</span> <span class="n">list2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span> <span class="ow">is</span> <span class="n">list3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Parentheses:</strong> You can (and certainly will at some point need to) check for the truth of statements involving many variables, and complex logic requests. You can dictate the order Python evaluates statements. So, for example,</p>
+
+<pre><code>if (Poor and TaxRateAtOrBelowNegative10) or (MiddleClass and TaxRateAtOrBelow5) or (Rich and TaxRateBelow15):
+    start_audit()</code></pre>
+<p>will audit rich files if they have less than a 15% tax rate, but will only audit poor tax filers if they had a negative tax rate.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># a few silly examples</span>
+
+<span class="nb">print</span><span class="p">((</span><span class="mi">3</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="c1"># 1 is not greater than 2, so this evaluates to... </span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="o">&gt;</span><span class="mi">3</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>   
+<span class="nb">print</span><span class="p">((</span><span class="mi">3</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">((</span><span class="mi">3</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Variables-are-pointers">Variables are pointers<a class="anchor-link" href="#Variables-are-pointers"> </a></h3><p><a href="https://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/03-Semantics-Variables.ipynb">Read this page!</a></p>
+<p>I'll simply provide the following <strong>warning: Unless you read and understand the link above,</strong> any time you write <code>x=y</code>, you might be creating a secret bug in your code that will cause potentially enormous errors!</p>
+<p>To illustrate:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="c1"># y was changed as well... Why? Read the page above!</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;list&#39;&gt;
+[1, 2, 3]
+[1, 2, 3, 4]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Everything-is-an-object">Everything is an object<a class="anchor-link" href="#Everything-is-an-object"> </a></h3><p>Referring again to <a href="https://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/03-Semantics-Variables.ipynb">Whirlwind of Python</a>,</p>
+<blockquote><p>In object-oriented programming languages like Python, an object is an entity that contains data along with associated metadata and/or functionality. In Python everything is an object, which means every entity has some metadata (called attributes) and associated functionality (called methods). These attributes and methods are accessed via the dot syntax.</p>
+</blockquote>
+<p>So, <code>object.method(&lt;arguments here&gt;)</code> will call the function <code>method</code> from/on <code>object</code>, and the function uses whatever arguments you pass it.</p>
+<p>Examples:</p>
+<ul>
+<li>Above, the object <code>x</code> has the type attribute of <code>list</code>, and lists have a "method" called <code>append</code>.</li>
+<li><a href="python-files/02a-a-simple-program.html">In the simple program</a>, we imported a package: <code>import seaborn as sns</code>. Now, the "package" <code>seaborn</code> is actually an "object" (which we call <code>sns</code> for convenience). That object - like any object - has "method" functions. In that code, for example, I called <code>sns.lineplot(data=cumrets)</code> to plot a line.</li>
+<li>_Note: I actually called <code>sns.lineplot(data=cumrets).set_title("Returns, ex-dividends")</code>. In this, python evaluated <code>sns.lineplot(data=cumrets)</code>, which is itself an object (the plot), which in turn has additional methods. So I was able to "chain" that with <code>.set_title("Returns, ex-dividends")</code> to add the title._</li>
+<li>Seriously, EVERYTHING is an object. <ul>
+<li>Lists are objects (duh)</li>
+<li>Attributes and methods of objects are themselves objects. Put <code>type(x.append)</code> at the end of the code block above. </li>
+<li>Files</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Common-object-types">Common object types<a class="anchor-link" href="#Common-object-types"> </a></h3><p><code>Boolean</code> and <code>int</code> were covered above.</p>
+<p><code>None</code>. <a href="https://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/05-Built-in-Scalar-Types.ipynb#Aside:-Floating-point-precision">See here</a>.</p>
+<p><code>float</code>. <strong>WARNING: Beware of comparing floating point numbers!</strong> Below is an example, and see <a href="https://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/05-Built-in-Scalar-Types.ipynb#Aside:-Floating-point-precision">here for the explanation</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mf">1.0</span><span class="o">+</span><span class="mf">2.0</span> <span class="o">==</span> <span class="mf">3.0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">0.1</span><span class="o">+</span><span class="mf">0.2</span> <span class="o">==</span> <span class="mf">0.3</span><span class="p">)</span> <span class="c1"># WHAT?!</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+False
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>str</code>. There are built-in functions that work on strings directly</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="s1">&#39;some string&#39;</span> <span class="c1"># a = &quot;some string&quot; is the same. </span>
+
+<span class="c1"># some functions work on strings directly</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> 
+
+<span class="c1"># string types also have many functions as methods</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="c1">#YOU: type a.&lt;tab&gt; in your notebook, and jupyter will open a list of possible functions!</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Built-in-data-structures">Built in data structures<a class="anchor-link" href="#Built-in-data-structures"> </a></h3><p>Python has <code>list</code>, <code>tuple</code>, <code>dict</code>, and <code>set</code>. Beginners typically rely on lists extensively, but as you progress, you fill find that all four are extremely useful, because their unique traits solve different needs.</p>
+<p><a href="https://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/06-Built-in-Data-Structures.ipynb">After class, you should absolutely read this</a> and as you do, try the examples, and throw them into your growing personal cheat sheet.</p>
+<p>First, let me illustrate the use of <code>.extend()</code> vs <code>.append()</code> vs <code>+</code> for strings:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">L</span><span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="n">L</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">5</span><span class="p">])</span>    <span class="c1"># extend concatenates</span>
+<span class="n">L</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>  <span class="c1"># concatenates work the same with more elemens</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">L</span> <span class="o">+</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">]</span>  <span class="c1"># + concatenates</span>
+<span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>      <span class="c1"># append adds its entire argument to the list as a new element. </span>
+<span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mi">6</span><span class="p">])</span>    <span class="c1"># 7 is an int, so it goes in as an int, but [6] is a *list*, so append puts a list as the element</span>
+<span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>  <span class="c1"># see, the last element is [8,9]</span>
+<span class="n">L</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[8, 5, 6, 3, 7, 5, 3, 4, 13, 14, 7, [6], [8, 9]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, let's all define this vector: <code>L=[8, 5, 6, 3, 7]</code>.</p>
+<p><strong>TRY, PAIR, SHARE: Write code that does the following. Discuss with the person next to you as needed:</strong></p>
+<ol>
+<li>Returns the length.</li>
+<li>Returns the largest element.</li>
+<li>Returns the smallest element.</li>
+<li>Returns the total of the vector.</li>
+<li>Returns the first element.</li>
+<li>Returns the last element.</li>
+<li>Returns the first 2 elements.</li>
+<li>Returns the last 2 elements.</li>
+<li>Returns the odd numbered elements (i.e. [8,6,7].</li>
+</ol>
+<p>I'd suggest putting what you just learned about how python indexes an object and how to slice a list into your personal cheat sheet until you have it memorized thoroughly.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For-loops">For loops<a class="anchor-link" href="#For-loops"> </a></h3><p>Python loops are very intuitive:</p>
+
+<pre><code>for state in states:
+    capitol=stateCapitals[state]
+    print(capitol)
+    print(capitol.upper())
+    &lt;you can use as many lines as you need, just keep indenting&gt;
+    &lt;the indents are 4 spaces, or more commonly, a &lt;tab&gt;&gt;
+
+print(states) # &lt;-- the for loop ends when you write a line of 
+              # code (not a comment!) that is unindented</code></pre>
+<p>So, for each state, Python will start the indented block of code and run each line within the code block in sequence. So if the list of states is <code>[Alabama, Alaska, Arizona,...]</code>, Python will...</p>
+<ol>
+<li>Set state = 'Alabama'</li>
+<li>Set capitol = 'Montgomery'</li>
+<li>Print 'Montgomery'</li>
+<li>Print 'MONTGOMERY'</li>
+<li>Execute the next two lines of code that I've "skipped above".</li>
+<li>At the end of the block of code, python will check if there is another element in the states vector. There is!</li>
+<li>Set state = 'Alaska'</li>
+<li>Set capitol = 'Juneau'</li>
+<li>Print 'Juneau'</li>
+<li>Print 'JUNEAU'</li>
+<li>...</li>
+<li>Set state = 'Wyoming'</li>
+<li>Set capitol = 'Cheyenne'</li>
+<li>Print 'Cheyenne'</li>
+<li>Print 'CHEYENNE'</li>
+<li>Is there another state? No? Ok! The for-loop is complete! Python will exit the code block and proceed. The next line of code is <code>print(states)</code> and so that's the next thing it will do.</li>
+</ol>
+<p>A few comments:</p>
+<ul>
+<li>The syntax is <code>for &lt;name&gt; in &lt;iterable object&gt;:</code>. <strong>Note the colon, which you must include!</strong> After that, all lines of code within the "block" of code of the for loop are indented. <ul>
+<li><em>Note: When I write anything inside <code>&lt;&gt;</code>, you should drop the "&lt;" and "&gt;" symbols too.</em></li>
+</ul>
+</li>
+<li>The iterator object can be anything Python can iterate through, e.g. a list. (But not just lists!) So the list above is a list of states, and note that it is descriptively named "states". </li>
+<li>You decide what the <code>&lt;name&gt;</code> is, and it should be something that communicates the content. <ul>
+<li><strong><em>Generally speaking</em>, don't name variables in Python <code>x</code>, <code>y</code>, <code>z</code>, <code>vector</code>, <code>myvector</code> and other uninformative names! Use informative names to make you code readable!</strong></li>
+<li>If you are looping over <code>letters</code>, each object might be called a <code>letter</code>, if you are looping over <code>stocks</code>, each element should probably be called a <code>stock</code>,.. (DUH, right?)</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_popout">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>PYTHON AND INDENTATION</strong>
+<br></p>
+<p>In python, indentations at the beginning of lines are not "up to the user". Indentations indicate a "block" of code that is run as a unit.
+<br></p>
+<p>These two codes look similar but produce different results:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_popout">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>       <span class="c1"># this is false, obviously,</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span>        <span class="c1"># so this never runs and </span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am not here.&#39;</span><span class="p">)</span> <span class="c1"># this doesn&#39;t print</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell tag_popout">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>       <span class="c1"># this is false, obviously,</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span>        <span class="c1"># so this never runs and </span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am here&#39;</span><span class="p">)</span> <span class="c1"># this doesn&#39;t print</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>I am here
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell tag_poopout">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Conversely, how you use whitespace <em>within</em> a line is up to you. Both of these lines of code are the same:</p>
+<p><code>print(      a)
+print(a)</code></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="If,-elif,-else">If, elif, else<a class="anchor-link" href="#If,-elif,-else"> </a></h3><p>Syntax:</p>
+
+<pre><code>if &lt;condition #1&gt;:                         # you must use the colon!
+     &lt;do some stuff if condition is true&gt;
+elif &lt;condition #2&gt;:                       # as in "Else-If"
+    &lt;if condition #1 is false, and 
+    condition #2 is true, run this block&gt;
+else:
+    &lt;if neither #1 or #2 are true, do this&gt;</code></pre>
+<p>Comments:</p>
+<ul>
+<li>You can include zero or as many <code>elif</code> code blocks as you want</li>
+<li>You can omit the <code>else</code> block entirely</li>
+<li>Whatever is in <code>&lt;condition&gt;</code> must evaluate to True or False or 1 or 0.</li>
+<li>See the <strong>"Logic and comparisons"</strong> section above on how Python evaluates conditions</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="While">While<a class="anchor-link" href="#While"> </a></h3><p>Syntax:</p>
+
+<pre><code>while &lt;condition is True&gt;:
+    &lt;do some stuff&gt;</code></pre>
+<p>For example:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># &quot;+=&quot; is short for add to myself. </span>
+                 <span class="c1"># Here, it&#39;s an abbreviation for: counter = counter + 1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+2
+3
+4
+5
+6
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I have one important comment about <code>while</code> loops: <strong>Every time through the loop, there must be a chance for the condition to become False. If not, your code will loop forever!</strong></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Writing-your-own-functions">Writing your own functions<a class="anchor-link" href="#Writing-your-own-functions"> </a></h3><p>Writing your own functions is important for improving the clarity of your code  because it</p>
+<ul>
+<li>separates different strands of logic</li>
+<li>allows you to reuse code</li>
+<li>prevents copy/paste errors</li>
+</ul>
+<p>To write a function, write <code>def &lt;nameOfYourChoice&gt;(&lt;you can specify arguments the function takes, or none&gt;):</code> and then write your indented code block that is the function.</p>
+<p>On inputs:</p>
+<ul>
+<li><strong>Any object(s) you want can be given as inputs!</strong> You can give as inputs a variable, a list, a dictionary, even a function. Remember, in python, <em>everything is an object</em>. </li>
+<li>Functions can get "positional" arguments or keyword arguments. Positional arguments are understood because Python figures them out based on the order in which you provide them.</li>
+</ul>
+<p>On outputs:</p>
+<ul>
+<li><strong>Any object(s) you want can be returned as outputs!</strong> Once the code executes a line starting with <code>return</code>, the function will end and output whatever is on that line. It can be a list, set, function, dictionary, string. It can be a dictionary with lists inside it, or a list with dictionaries inside it. Go wild if you want! (While practicing python. In practice, don't be complex for the sake of it!)</li>
+</ul>
+<p>On documentation:</p>
+<ul>
+<li>Code that is poorly documented won't be used. By you, you in the future, or others. So you should document it! You do this by adding line(s) immediately after the first line, as the example below show.</li>
+<li>The docstring can be accessed by users via <code>&lt;functionName&gt;?</code> or <code>help(&lt;FunctionName&gt;)</code> the same as any other function. In fact, this is how help is written in all Python functions we've used!</li>
+</ul>
+<p><strong>Example:</strong> The function below shows off positional and keyword arguments, how to write a multiline <em>"docstring"</em>, how the program ends once a return is executed, and outputting a list.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    The first argument you give goes to x, the second to a, the third to b.</span>
+<span class="sd">    If you do no provide a or b, they default to the value 1.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;WHOA THIS IS NEGATIVE&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="c1"># you can return any object(s) you want! this is a list, for example</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">))</span> <span class="c1">#notice it never gets to a+b*x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">help</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>WHOA THIS IS NEGATIVE
+[6, 2]
+[2, 2]
+[4, 2]
+Help on function f in module __main__:
+
+f(x, a=1, b=1)
+    The first argument you give goes to x, the second to a, the third to b.
+    If you do no provide a or b, they default to the value 1.
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># this won&#39;t work! python requires you to use the keyword arguments AFTER the positional arguments</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-29-4bfe94fa827f&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">2</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    print(f(b=3,1))</span>
+<span class="ansi-white-intense-fg ansi-bold">               ^</span>
+<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> positional argument follows keyword argument
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Scope">Scope<a class="anchor-link" href="#Scope"> </a></h3><p>I want you to be generally aware of the concept of "global" and "local" scope. Generally, python objects are available only within the region they are defined and subregions therein. Put differently, object are available downstream, but not upstream.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">def</span> <span class="nf">silly_func</span><span class="p">():</span>
+    <span class="n">xyz</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># variables defined OUTSIDE AND BEFORE a function are visible INSIDE the func</span>
+    
+<span class="n">silly_func</span><span class="p">()</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">xyz</span><span class="p">)</span>   <span class="c1"># variables defined INSIDE a function are NOT visible OUTSIDE the func</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-37-a924fe04c819&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>print<span class="ansi-yellow-intense-fg ansi-bold">(</span>xyz<span class="ansi-yellow-intense-fg ansi-bold">)</span>   <span class="ansi-red-intense-fg ansi-bold"># variables defined INSIDE a function are NOT visible OUTSIDE the func</span>
+<span class="ansi-green-fg">      2</span> print<span class="ansi-yellow-intense-fg ansi-bold">(</span>x<span class="ansi-yellow-intense-fg ansi-bold">)</span>     <span class="ansi-red-intense-fg ansi-bold"># the value outside the function didn&#39;t change</span>
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;xyz&#39; is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">def</span> <span class="nf">silly_func</span><span class="p">():</span>
+    <span class="n">x</span><span class="o">=</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">silly_func</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>               <span class="c1"># changing the downstream variable inside the function didn&#39;t change the upstream version</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2
+1
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Popular,-nay,-essential-packages">Popular, nay, essential packages<a class="anchor-link" href="#Popular,-nay,-essential-packages"> </a></h2><p>You will surely need to learn (to some degree) the following packages. <strong>For each, you might note the most common and useful functions, and copy "cookbook" uses that you can paste into new programs.</strong> (E.g. how to open a csv file.)</p>
+<p><em>Note: I do not personally, nor do many programmers, commit to memory many functions of many packages. We simply <strong>know what can be done</strong> and when needed, we search (tab completion/google/stack overflow) for the command/recipe for that function.</em></p>
+<ul>
+<li>Built-in packages:<code>os</code> <code>sys</code> <code>itertools</code> <code>re</code> <code>datetime</code> <code>csv</code></li>
+<li>Datasci packages (Anaconda installs these for you!), note the aliases here aren't strictly needed, but by convention, virtually everyone uses the shorter names<ul>
+<li><code>pandas as pd</code> </li>
+<li><code>seaborn as sns</code></li>
+<li><code>matplotlib as mpl</code></li>
+<li><code>statsmodels.api as sm</code> </li>
+<li><code>matplotlib.pyplot as plt</code></li>
+<li><code>numpy as np</code> <code>sklearn</code></li>
+</ul>
+</li>
+<li>Web crawling<ul>
+<li><code>beautifulsoup4 as bs4</code> </li>
+<li><code>html5lib</code></li>
+<li><code>requests</code></li>
+<li><code>selenium</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Debugging">Debugging<a class="anchor-link" href="#Debugging"> </a></h2><h3 id="Read-the-error-codes!">Read the error codes!<a class="anchor-link" href="#Read-the-error-codes!"> </a></h3><p>Really, they tend to be informative! You can google them for more info, but even without Google, they often point directly at the issue and location.</p>
+<h3 id="%debug"><code>%debug</code><a class="anchor-link" href="#%debug"> </a></h3><p><a href="https://jakevdp.github.io/PythonDataScienceHandbook/01.06-errors-and-debugging.html#Debugging:-When-Reading-Tracebacks-Is-Not-Enough">Covered in nice detail here</a>.</p>
+<h3 id="Flipping-switches-/-divide-and-conquer">Flipping switches / divide and conquer<a class="anchor-link" href="#Flipping-switches-/-divide-and-conquer"> </a></h3><p>After slaving over your computer and a piece of paper (you smartly planned out your code before you went in head first), you've found a clever solution to your problem. Your code is beautiful and elegant, like this:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span> <span class="c1"># imagine this is a bunch of code</span>
+<span class="mi">2</span><span class="o">+</span><span class="mi">2</span> <span class="c1"># imagine this is a bunch of code</span>
+<span class="mi">2</span><span class="o">+</span><span class="mi">2</span> <span class="c1"># imagine this is a bunch of code</span>
+<span class="n">Error</span> <span class="c1"># somewhere in the code is an error. But in real programming you don’t know the error is here!</span>
+<span class="mi">2</span><span class="o">+</span><span class="mi">2</span> <span class="c1"># imagine this is a bunch of code</span>
+<span class="mi">2</span><span class="o">+</span><span class="mi">2</span> <span class="c1"># imagine this is a bunch of code</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But python had other ideas, I guess...</p>
+<p><img src="https://media.giphy.com/media/dbtDDSvWErdf2/giphy.gif" alt=""></p>
+<p>Despite the appearance (his computer is on fire, after all), that guy works in <a href="https://www.imdb.com/title/tt0487831/">IT</a>. 
+He spends all day taking calls from people with computer problems, typically menial. It drives him and his coworker crazy. One of the true lessons of the show, a profound piece of wisdom, really, and one that is my first method of solving virtually any technical issue, comes from that coworker:</p>
+<p><img src="https://media.giphy.com/media/Oe4V14aLzv7JC/giphy.gif" alt=""></p>
+<p>I don't mean turning the computer off and on again. (Well, sometimes.) ... But you can turn parts of your code off:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span> <span class="c1"># imagine this is a bunch of code</span>
+<span class="mi">2</span><span class="o">+</span><span class="mi">2</span> <span class="c1"># imagine this is a bunch of code</span>
+<span class="c1"># 2+2 # imagine this is a bunch of code</span>
+<span class="c1"># Error # somewhere in the code is an error. But in real programming you don’t know the error is here!</span>
+<span class="c1"># 2+2 # imagine this is a bunch of code</span>
+<span class="c1"># 2+2 # imagine this is a bunch of code</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>At least we know the issue isn't in the first two lines. We can proceed and look elsewhere.</p>
+<p>Luckily, python error statements tend to be informative enough. Above, we know the issue is in line 4. But in more sophisticated settings, where the lines above aren't <code>2+2</code> but chunks of code, and the error isn't simply due to syntax or namespace issues... that can work.</p>
+<h3 id="Print-statements">Print statements<a class="anchor-link" href="#Print-statements"> </a></h3><p>Another ugly, possibly brutish method of debugging is: put print statements all over your code.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">silly_func_here_but_in_a_real_situation_its_complicated_and_mysterious_ooooooh</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">6</span>
+<span class="n">a</span><span class="o">=</span><span class="n">silly_func_here_but_in_a_real_situation_its_complicated_and_mysterious_ooooooh</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">a</span><span class="o">+=</span><span class="n">a</span> <span class="c1"># += means &quot;add whatever is on the right to the existing value&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># see, the value changed</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;hey&#39;</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="n">a</span><span class="o">+</span><span class="s1">&#39;hey&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this example, we don't actually need print statements to realize that <code>a</code> is an <code>int</code> type and <code>b</code> is a <code>str</code> type because the error code is so obvious.</p>
+<p>Nevertheless...</p>
+<h2 id="Seriously...-print-your-data-and-objects-OFTEN!">Seriously... print your data and objects OFTEN!<a class="anchor-link" href="#Seriously...-print-your-data-and-objects-OFTEN!"> </a></h2><p>This isn't even a "debugging" point per se.</p>
+<p>You know a 6 is a 6. But we will be handling increasingly large datasets, and it's easy to make rather large changes without knowing exactly what you have done, ... or not done ... , if you don't see into the object. Are you sure that object is exactly what you think it is, containing exactly what you think it does? Thus, the <code>print</code> statement and other ways of "glancing into" datasets are crucial. Even when you've all become pythonic pros, you should tend towards examining your objects "too much".</p>
+<h2 id="Are-you-still-stuck?">Are you still stuck?<a class="anchor-link" href="#Are-you-still-stuck?"> </a></h2><p>It'll happen! We will try to build some ambitious code this semester! (Imagine trying to replicate the "simple program" we saw last class in Excel!) Coding complicated analysis is iterative and debugging can be <a href="https://media.giphy.com/media/92S5gReZGnDgY/giphy.gif">as tough as having your IT firm audited</a>.</p>
+<p>So if you've tried the above, what can you do?</p>
+<ul>
+<li>Writing smart code will save us from getting into intractible problems. More on that next class. </li>
+<li>Again, see the <a href="https://ledatascifi.github.io/studentresourcevert/resource-landing.html">resources tab of our website!</a> It's got some good pointers, along with a 15 minute rule: <strong>Once you’ve spent 15 minutes attempting to troubleshoot a problem, you must ask for help!</strong></li>
+<li>Finally, the resources tab also suggests that clearing your head and <a href="https://media.giphy.com/media/h6cFYO8miNhok/giphy.gif">getting a mental break might be a good idea</a>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_popout">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Suppose you have a large dataset you want to explore. What can you do to look at it?</strong></p>
+<ol>
+<li>Print parts of it in Jupyter, along with many summary stats. </li>
+<li>Output to a csv file and open in Excel.</li>
+<li>Use the <code>spyder</code> program that came with Anaconda. Spyder has a UI that is more like Matlab or Stata, and so you can view and scroll through objects in memory a la Excel <em>as you build your code</em>. This can be very, very useful for developing code. (In fact, Spyder is how most of my own research code is written.) Spyder does not however, allow for Markdown. </li>
+</ol>
+<p><br>
+If you have a dataset in Jupyter you want to open in Spyder, you can either save the object from Jupyter (via the <code>pickle</code> module) and open it in Spyder, or convert the <code>ipynb</code> file to a simple <code>py</code> file which removes the Markdown so that Spyder can run. <em>(File &gt; Download as &gt; py)</em> Then you'd simply execute the code in Spyder up to the point you were at, and continue.</p>
+<p><br></p>
+<p>Much of this class will require delivery of <code>ipynb</code> files, and I would recommended using Jupyter exclusively at the beginning. However, if you personally prefer Spyder for bigger projects later on, feel free to use Spyder until the project is ready for write up (at which point you copy the code into a <code>ipynb</code> file and add Markdown elements to build the report).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Authoring">Authoring<a class="anchor-link" href="#Authoring"> </a></h2><p>The whole point of data analysis is to communicate. You know the saying, if a "Naive Bayes Classification" falls in a forest and no one is around to hear it...</p>
+<p>In this class, the Jupyter notebook files are the output we're aiming for. No need to try to reformat for printing, no Word, no LaTeX. Just these notebooks. They weave data and narrative text into reproducible output. That's the goal! The main issue is that there is a lack of built-in spell checks or grammar checks. See the popout to the right for my current spell checker solution. If you find a better option, please let me know!</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_popout">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Adding a spell checker.</strong> Open Terminal/Powershell, and run these 3 lines:</p>
+
+<pre><code>pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+jupyter nbextension enable spellchecker/main</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How do you write nice reports in Markdown? Well, we already have practice with cells. For help with formatting text, tables, and other possibilities,</p>
+<ol>
+<li>Do <a href="https://commonmark.org/help/tutorial/">his quick tutorial</a>. People have seemed to like this.</li>
+<li>GitHub has a <a href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf">Markdown cheatsheet</a>.</li>
+<li>As usual, I'm often just googling "markdown how to <something>".</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Before-next-class">Before next class<a class="anchor-link" href="#Before-next-class"> </a></h2><ol>
+<li>After class: Upload the notebook you've been playing with into your participation repo. </li>
+<li>Edit your <code>navigating_github.md</code> file from the first class. These changes are a part of your participation grade:<ul>
+<li>Use 3 markdown features to make the file easier to read for visitors to your repo.</li>
+<li>Add at least one "How to" notes for your own benefit. E.g. "To open my participation repo in Jupyter I run" <code>jupyter notebook --notebook-dir "C:\Users\Don\FirstPythonCode"</code>. You might add similar notes for folders containing your assignments, your peer reviews, your project... You might also note what exactly your workflow is when using GitHub Desktop with a given repo.</li>
+</ul>
+</li>
+<li>Go through #3 to #14 of <a href="https://github.com/jakevdp/WhirlwindTourOfPython">A Whirlwind Tour of Python</a>. You'll notice its a deeper dive on much of what we covered today, along with a few new topics. As you go through that, have one large python notebook open, and simultaneously write and execute code as the book discusses it.</li>
+<li>Start the first assignment. It's available. </li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Credits">Credits<a class="anchor-link" href="#Credits"> </a></h2><p>To <a href="https://github.com/jakevdp/WhirlwindTourOfPython">Whirlwind Tour of Python</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
