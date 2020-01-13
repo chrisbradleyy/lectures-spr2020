@@ -13,7 +13,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: code python object print jupyter github not class function com above list returns into media giphy open data example want true line block spyder file through jakevdp point whirlwindtourofpython built called ipynb functions note set lines condition markdown debugging might should run false statements org arguments objects state states issue files repo must read notebook here any method sns after next element capitol gif me computer participation learn try large much e logic need variables nbviewer blob master syntax lists program just loop dont help packages youve let name before practice whirlwind execute cheat html games via copy parentheses g
+search: code python object print jupyter github not class function com above list returns into media giphy open data example want true line block spyder file through jakevdp point whirlwindtourofpython built called ipynb functions objects set lines condition markdown debugging might should run false statements org arguments note state states issue repo must read notebook here any method sns after next element capitol packages gif me computer participation files learn try large much e inputs logic right need variables nbviewer blob master syntax lists program just loop dont help youve let name before semester practice whirlwind execute cheat html games via
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -296,7 +296,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <pre><code>if (Poor and TaxRateAtOrBelowNegative10) or (MiddleClass and TaxRateAtOrBelow5) or (Rich and TaxRateBelow15):
     start_audit()</code></pre>
-<p>will audit rich files if they have less than a 15% tax rate, but will only audit poor tax filers if they had a negative tax rate.</p>
+<p>will audit rich filers if they have less than a 15% tax rate, but will only audit poor tax filers if they had a negative tax rate.</p>
 
 </div>
 </div>
@@ -598,18 +598,6 @@ print(states) # &lt;-- the for loop ends when you write a line of
 <li>Is there another state? No? Ok! The for-loop is complete! Python will exit the code block and proceed. The next line of code is <code>print(states)</code> and so that's the next thing it will do.</li>
 </ol>
 <p>A few comments:</p>
-<ul>
-<li>The syntax is <code>for &lt;name&gt; in &lt;iterable object&gt;:</code>. <strong>Note the colon, which you must include!</strong> After that, all lines of code within the "block" of code of the for loop are indented. <ul>
-<li><em>Note: When I write anything inside <code>&lt;&gt;</code>, you should drop the "&lt;" and "&gt;" symbols too.</em></li>
-</ul>
-</li>
-<li>The iterator object can be anything Python can iterate through, e.g. a list. (But not just lists!) So the list above is a list of states, and note that it is descriptively named "states". </li>
-<li>You decide what the <code>&lt;name&gt;</code> is, and it should be something that communicates the content. <ul>
-<li><strong><em>Generally speaking</em>, don't name variables in Python <code>x</code>, <code>y</code>, <code>z</code>, <code>vector</code>, <code>myvector</code> and other uninformative names! Use informative names to make you code readable!</strong></li>
-<li>If you are looping over <code>letters</code>, each object might be called a <code>letter</code>, if you are looping over <code>stocks</code>, each element should probably be called a <code>stock</code>,.. (DUH, right?)</li>
-</ul>
-</li>
-</ul>
 
 </div>
 </div>
@@ -642,23 +630,7 @@ print(states) # &lt;-- the for loop ends when you write a line of
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>       <span class="c1"># this is false, obviously,</span>
     <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span>        <span class="c1"># so this never runs and </span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am not here.&#39;</span><span class="p">)</span> <span class="c1"># this doesn&#39;t print</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="jb_cell tag_popout">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;stating new block&#39;</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>       <span class="c1"># this is false, obviously,</span>
     <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="mi">2</span>        <span class="c1"># so this never runs and </span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am here&#39;</span><span class="p">)</span> <span class="c1"># this doesn&#39;t print</span>
@@ -675,7 +647,8 @@ print(states) # &lt;-- the for loop ends when you write a line of
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>I am here
+<pre>stating new block
+I am here
 </pre>
 </div>
 </div>
@@ -686,7 +659,29 @@ print(states) # &lt;-- the for loop ends when you write a line of
 </div>
 </div>
 
-<div class="jb_cell tag_poopout">
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>The syntax is <code>for &lt;name&gt; in &lt;iterable object&gt;:</code>. <strong>You must include the colon!</strong> After that, all lines of code within the "block" of code of the for loop are indented. See the popout to the right on indentation.<ul>
+<li><em>Note: When I write anything inside <code>&lt;&gt;</code>, you should drop the "&lt;" and "&gt;" symbols too.</em></li>
+</ul>
+</li>
+<li>The iterator object can be anything Python can iterate through, e.g. a list. (But not just lists!) So the list above is a list of states, and note that it is descriptively named "states". </li>
+<li>You decide what the <code>&lt;name&gt;</code> is, and it should be something that communicates the content. <ul>
+<li><strong><em>Generally speaking</em>, don't name variables in Python <code>x</code>, <code>y</code>, <code>z</code>, <code>vector</code>, <code>myvector</code> and other uninformative names! Use informative names to make you code readable!</strong></li>
+<li>If you are looping over <code>letters</code>, each object might be called a <code>letter</code>, if you are looping over <code>stocks</code>, each element should probably be called a <code>stock</code>,.. (DUH, right?)</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -716,7 +711,7 @@ else:
 <ul>
 <li>You can include zero or as many <code>elif</code> code blocks as you want</li>
 <li>You can omit the <code>else</code> block entirely</li>
-<li>Whatever is in <code>&lt;condition&gt;</code> must evaluate to True or False or 1 or 0.</li>
+<li>Whatever is in <code>&lt;condition&gt;</code> must evaluate to True or False or 1 or 0</li>
 <li>See the <strong>"Logic and comparisons"</strong> section above on how Python evaluates conditions</li>
 </ul>
 
@@ -750,7 +745,7 @@ else:
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
-    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># &quot;+=&quot; is short for add to myself. </span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># &quot;+=&quot; is short for &quot;add to myself&quot;. </span>
                  <span class="c1"># Here, it&#39;s an abbreviation for: counter = counter + 1</span>
 </pre></div>
 
@@ -815,10 +810,10 @@ else:
 </ul>
 <p>On documentation:</p>
 <ul>
-<li>Code that is poorly documented won't be used. By you, you in the future, or others. So you should document it! You do this by adding line(s) immediately after the first line, as the example below show.</li>
+<li>Code that is poorly documented won't be used. By you, by you in the future, or by others. So you should document it! You do this by adding line(s) immediately after the first line, as the example below shows.</li>
 <li>The docstring can be accessed by users via <code>&lt;functionName&gt;?</code> or <code>help(&lt;FunctionName&gt;)</code> the same as any other function. In fact, this is how help is written in all Python functions we've used!</li>
 </ul>
-<p><strong>Example:</strong> The function below shows off positional and keyword arguments, how to write a multiline <em>"docstring"</em>, how the program ends once a return is executed, and outputting a list.</p>
+<p><strong>Example:</strong> The function below shows off positional and keyword arguments, how to write a multiline <em>"docstring"</em>, how the program ends once a return is executed, outputting a list, and setting default values for inputs.</p>
 
 </div>
 </div>
@@ -920,7 +915,7 @@ f(x, a=1, b=1)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Scope">Scope<a class="anchor-link" href="#Scope"> </a></h3><p>I want you to be generally aware of the concept of "global" and "local" scope. Generally, python objects are available only within the region they are defined and subregions therein. Put differently, object are available downstream, but not upstream.</p>
+<h3 id="Scope">Scope<a class="anchor-link" href="#Scope"> </a></h3><p>I want you to be generally aware of the concept of "global" and "local" scope. Generally, python objects are available only within the region they are defined and subregions therein. Put differently, objects are available downstream, but not upstream.</p>
 
 </div>
 </div>
@@ -1044,7 +1039,7 @@ f(x, a=1, b=1)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Popular,-nay,-essential-packages">Popular, nay, essential packages<a class="anchor-link" href="#Popular,-nay,-essential-packages"> </a></h2><p>You will surely need to learn (to some degree) the following packages. <strong>For each, you might note the most common and useful functions, and copy "cookbook" uses that you can paste into new programs.</strong> (E.g. how to open a csv file.)</p>
+<h2 id="Popular,-nay,-essential-packages">Popular, nay, essential packages<a class="anchor-link" href="#Popular,-nay,-essential-packages"> </a></h2><p>As the semester proceeds, you will surely need to learn (to some degree) the following packages. <strong>For each, you might note the most common and useful functions, and copy "cookbook" uses of the packages which you can paste into new programs.</strong> (E.g. how to open a csv file.)</p>
 <p><em>Note: I do not personally, nor do many programmers, commit to memory many functions of many packages. We simply <strong>know what can be done</strong> and when needed, we search (tab completion/google/stack overflow) for the command/recipe for that function.</em></p>
 <ul>
 <li>Built-in packages:<code>os</code> <code>sys</code> <code>itertools</code> <code>re</code> <code>datetime</code> <code>csv</code></li>
@@ -1103,6 +1098,30 @@ f(x, a=1, b=1)
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-2-49b639131bdf&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      2</span> <span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">+</span><span class="ansi-cyan-intense-fg ansi-bold">2</span> <span class="ansi-red-intense-fg ansi-bold"># imagine this is a bunch of code</span>
+<span class="ansi-green-fg">      3</span> <span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">+</span><span class="ansi-cyan-intense-fg ansi-bold">2</span> <span class="ansi-red-intense-fg ansi-bold"># imagine this is a bunch of code</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 4</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>Error <span class="ansi-red-intense-fg ansi-bold"># somewhere in the code is an error. But in real programming you don’t know the error is here!</span>
+<span class="ansi-green-fg">      5</span> <span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">+</span><span class="ansi-cyan-intense-fg ansi-bold">2</span> <span class="ansi-red-intense-fg ansi-bold"># imagine this is a bunch of code</span>
+<span class="ansi-green-fg">      6</span> <span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">+</span><span class="ansi-cyan-intense-fg ansi-bold">2</span> <span class="ansi-red-intense-fg ansi-bold"># imagine this is a bunch of code</span>
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;Error&#39; is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1138,6 +1157,23 @@ He spends all day taking calls from people with computer problems, typically men
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+</div>
 </div>
 </div>
 
@@ -1177,6 +1213,41 @@ He spends all day taking calls from people with computer problems, typically men
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>6
+12
+12
+hey
+</pre>
+</div>
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-4-2ac5244cfbad&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      8</span> print <span class="ansi-yellow-intense-fg ansi-bold">(</span>a<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">      9</span> print <span class="ansi-yellow-intense-fg ansi-bold">(</span>b<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 10</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>a<span class="ansi-yellow-intense-fg ansi-bold">+</span><span class="ansi-blue-intense-fg ansi-bold">&#39;hey&#39;</span>
+<span class="ansi-green-fg">     11</span> 
+
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -1272,7 +1343,7 @@ jupyter nbextension enable spellchecker/main</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Before-next-class">Before next class<a class="anchor-link" href="#Before-next-class"> </a></h2><ol>
-<li>After class: Upload the notebook you've been playing with into your participation repo. </li>
+<li>After class: Upload the notebook you've been playing with today into your participation repo. </li>
 <li>Edit your <code>navigating_github.md</code> file from the first class. These changes are a part of your participation grade:<ul>
 <li>Use 3 markdown features to make the file easier to read for visitors to your repo.</li>
 <li>Add at least one "How to" notes for your own benefit. E.g. "To open my participation repo in Jupyter I run" <code>jupyter notebook --notebook-dir "C:\Users\Don\FirstPythonCode"</code>. You might add similar notes for folders containing your assignments, your peer reviews, your project... You might also note what exactly your workflow is when using GitHub Desktop with a given repo.</li>
