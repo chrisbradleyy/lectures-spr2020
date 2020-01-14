@@ -1,0 +1,495 @@
+---
+redirect_from:
+  - "/01/04-golden-rules"
+interact_link: content/01/04_Golden_Rules.ipynb
+kernel_name: python3
+kernel_path: content/01
+has_widgets: false
+title: |-
+  Golden Rules
+pagenum: 6
+prev_page:
+  url: /01/03_Digging_into_Py.html
+next_page:
+  url: 
+suffix: .ipynb
+search: code data dataset rule firm py year project analysis b rules files gm dont run level bad change c keys unit variables functions documentation build should inputs ford golden not example sample file txt different database structure key profits class just its test good folder output input directories normalized self county elasticity ive those because our directory comments gentzkow research here problem whose last also point cleandata function abstract documenting apply table observation state help better issues want click section social very cant version tests errors didnt same figure lecture web stanford edu codeanddata xhtml magicparlabel entire whole university answer
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Golden Rules</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Golden-Rules-for-Projs-and-Progs">Golden Rules for Projs and Progs<a class="anchor-link" href="#Golden-Rules-for-Projs-and-Progs"> </a></h1><p>The goal of this class is to give you a set of rules, guidance, and some hard-earned wisdom to help you write better programs and develop better projects. I've spent more hours of my life fixing bad programs and issues caused by project management mistakes than I have spent watching the Detroit Lions be awful. So, please, let me help you avoid that tragedy! Don't let the Lions <em><strong>OR</strong></em> bad project/program habits ruin your Thanksgiving!</p>
+<p><strong>BUT FIRST!</strong> I want to do a status check and see what can be addressed. Please click your class time: <a href="https://forms.gle/UvK6dgCAk8WCcjYBA">1:35pm section</a> or <a href="https://forms.gle/v56dGBUn141v2fMK9">3pm section</a>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>It turns out that the issues I allude to above are not unique to me. Economists, financiers, social scientists, and researchers that are trained outside of software engineering or computer science are often (especially early on in careers) unaware of solutions those fields solved for problems that social scientists are only now (at least to them) just facing. It's very common, for example:</p>
+<ul>
+<li>You can't replicate an early version of analysis because it alls functions that have been moved.</li>
+<li>You want to change your sample for tests #4-#12 (in an analysis with 15 test), but the code that defines the sample has been copied and pasted throughout our project directory, and making the change requires updating dozens of files. Turns out, there were copy and paste errors, so those tests didn't even use the same sample!</li>
+<li>You return to a project after weeks (or months...) (or years...) away. Despite all the documentation and comments you left behind, it takes days just to figure out how to run the analysis again.</li>
+</ul>
+<p>I love this line from <a href="https://web.stanford.edu/~gentzkow/research/CodeAndData.xhtml#magicparlabel-39">a document this lecture is heavily based on:</a></p>
+<blockquote><p><strong>Here is a good rule of thumb: If you are trying to solve a problem, and there are multi-billion dollar firms whose entire business model depends on solving the same problem, and there are whole courses at your university devoted to how to solve that problem, you might want to figure out what the experts do and see if you can't learn something from it.</strong></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Outline">Outline<a class="anchor-link" href="#Outline"> </a></h2><ol>
+<li>Motivating the golden rules</li>
+<li>The golden rules</li>
+<li>Answer survey questions / additional practice</li>
+<li>If needed, cover materials from last class we didn't have time for</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="A-case-study-in-bad-research">A case study in bad research<a class="anchor-link" href="#A-case-study-in-bad-research"> </a></h2><p>We start with an absolutely essential question: <strong>Are characters in Game of Thrones more likely to die when they head north or south?</strong></p>
+<h3 id="One-folder:-A-&quot;common&quot;-data-science-project">One folder: A "common" data science project<a class="anchor-link" href="#One-folder:-A-&quot;common&quot;-data-science-project"> </a></h3><p>So I collected the text of the (currently 5, COME ON GEORGE) books. I <em>also</em> collected data on the names of characters so I can identify them in the text. I <em>also</em> collected data that maps the names of places to latitudes on the map. I have just about everything I need. I put these files in a folder, write some code to deal with data, and some code to produce output.</p>
+<p><em>There were definitely intermediate steps, but I don't remember exactly.</em> Luckily, this project wasn't "interactive, point-and-click in Excel" analysis. It was written in code! So it's oooooobviously reproducible.</p>
+<p>Let's all look at the folder and try to figure it out? <strong>What do you think each file is, and how is the analysis conducted  from data-to-draft?</strong></p>
+<p><img src="img/bad-directory.png" alt=""></p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>And no, this isn't a joke - I've definitely seen "professional" researchers with project organized like this in one way or another.</p>
+<h3 id="What-are-the-possible-issues-with-this?">What are the possible issues with this?<a class="anchor-link" href="#What-are-the-possible-issues-with-this?"> </a></h3><ol>
+<li>Which data file(s) are the real input?</li>
+<li>Do we run <code>clean_data.py</code> or <code>merge_data.py</code> first to build the analysis sample?</li>
+<li>Do we run <code>figures.py</code> or <code>regressions.py</code> first?</li>
+<li>Wait, maybe it's actually <code>regressions_Don.py</code> that we should run!</li>
+<li>Clearly, <code>regression_output.txt</code> comes from <code>regressions.py</code> (I hope!) and <code>regression_output_Don.txt</code> comes from <code>regressions_Don.py</code>.... But where on Earth did <code>regression_output2.txt</code> get conjured from?</li>
+<li>Speaking of mysteries, where the %^#! did <code>tables_for_paper.txt</code> come from? No python file mentions tables!</li>
+<li>Oh god, I just noticed two location files. I guess they are from different sources... but which is used by which files?</li>
+</ol>
+<p>So, let's see if we can't improve this whole situation.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Golden-Rules">Golden Rules<a class="anchor-link" href="#Golden-Rules"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left"><strong>Category</strong></th>
+<th style="text-align:left"><strong>Rule</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1. Automation</td>
+<td style="text-align:left">A. Automate everything that can be automated, don't do point-and-click analysis!</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">B. Write a single script that executes all code from beginning to end</td>
+</tr>
+<tr>
+<td style="text-align:left">2. Version control</td>
+<td style="text-align:left">A. Store code and data under version control</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">B. <strong>Run the whole directory before checking it back in!</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">3.  Directories</td>
+<td style="text-align:left">A. Separate directories by function</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">B. Separate files into inputs and outputs</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">C. Make directories portable</td>
+</tr>
+<tr>
+<td style="text-align:left">4. Keys / Units</td>
+<td style="text-align:left">A. Store cleaned data in tables with unique, non-missing "keys"</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">B. Keep data normalized as far into your code pipeline as you can</td>
+</tr>
+<tr>
+<td style="text-align:left">5. Abstraction/functions</td>
+<td style="text-align:left">A. Abstract to eliminate redundancy</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">B. Abstract to improve clarity</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">C. Otherwise, don't abstract</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">D. <strong>Unit test your functions!</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">6. Documentation</td>
+<td style="text-align:left">A. Is good... to a point</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">B. Don't write documentation you will not maintain</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">C. Code is better off when it is self-documenting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="The-effect-of-the-golden-rules">The effect of the golden rules<a class="anchor-link" href="#The-effect-of-the-golden-rules"> </a></h3><p>Let's apply those rules to our cursed analysis of character death in Game of Thrones and see if this makes the project easier to replicate (in terms of accuracy and time required).</p>
+<p><em>(Note, there are other ways to efficiently divide up analysis than what I propose here that have merit! Do not take this <strong>exact</strong> scheme as "gospel".)</em></p>
+<p>I’ve split the project into two sub-directories: "build" (whose function is to build the sample from the raw data inputs) and "analysis". These are two-sub tasks of any data project, and here, I've chosen to treat them as different functions and thus they get different folders (<strong>Rule 3.A</strong>).</p>
+<p><img src="img/dir-top.png" alt=""></p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>The build folder takes "inputs", which are processed by files inside "code", and places the analysis sample (now explicitly created!) in "output". Notice the inputs and outputs are clearly separated! (<strong>Rule 3.B</strong>) Temp files are created along the way, but are not "output".</p>
+<p><img src="img/dir-build.png" alt=""></p>
+<p><strong>Also, notice the new file <code>run_directory.py</code>.</strong> It very quickly and plainly documents how to run the entire code in the "build" project (<strong>Rule 1.B</strong>), and makes it ease to do so every time (<strong>Rule 2.B</strong>) before you push it back to the master repo on GitHub (<strong>Rule 2.A</strong>). <code>run_directory.py</code> is so simple, it is self-documenting (<strong>Rule 6.C</strong>).</p>
+
+<pre><code># to create DataSample.csv:
+clean_slate() # deletes all temp files and all output files
+execfile(clean_data.py)
+execfile(merge_data.py)
+execfile(export_data.py)</code></pre>
+<p>This project also obeys <strong>Rule 3.C (Make directories portable)</strong>. <em>Originally</em>, when <code>clean_data.py</code> wanted to load the inputs, it used <code>C:\Users\Desktop\Death_is_Which_Way\build\input\got1.txt</code>. But if our fearless TA tried to execute this file, it wouldn't work! (His Mac doesn't even have a <code>C</code> drive!)</p>
+<p><em>Now</em>, <code>clean_data.py</code> loads <code>..\input\got1.txt</code>. The <code>..\</code> tells it to look "one level up", then inside the input folder. <em>(Aside: You can go up two levels with <code>..\..\</code> and so on...)</em></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Good-Data:-Distinct-Keys-+-Variables-at-Key's-Unit-Level-=-Normalized">Good Data: Distinct Keys + Variables at Key's Unit-Level = Normalized<a class="anchor-link" href="#Good-Data:-Distinct-Keys-+-Variables-at-Key's-Unit-Level-=-Normalized"> </a></h3><p>There are multi-billion dollar firms whose entire business model depends on storing and accessing data. Therefore we should apply our rule and see how they store data:</p>
+<blockquote><p><strong>Long ago, smart people figured out a fundamental principle of database design: that the physical structure of a database should communicate its logical structure.</strong></p>
+</blockquote>
+<p>How does that work?</p>
+<ol>
+<li>Every database contains "elements" or "observations" (rows) and "variables" (columns). </li>
+<li>The "key" is the variable(s) that identifies a row in the table. <ul>
+<li><code>GM</code> is the key for the observation about General Motors in a dataset whose unit is a firm. </li>
+<li><code>(GM, 2000)</code> is the key for the observation for GM in 2000 in a firm-year dataset. </li>
+<li><strong>Keys should never be missing!</strong> (<strong>Rule 4.A</strong>) If one is, how can you say what that row is?</li>
+<li><strong>Keys should never be duplicated</strong>. If one is, your database won't have a logical structure any more.    </li>
+</ul>
+</li>
+<li>Closely related to "keys" is the idea of "units", refers to the level of aggregation in the dataset. <ul>
+<li>Variables in the dataset should apply as properties of the "unit" of the "key". In other words: <strong>variables are attributes of the key.</strong></li>
+<li>County population is a property of a county, so it lives in the county database, not the state database. State population is a property of a state, so it cannot live in the county table. </li>
+<li>**Implication: You need one dataset for each unit level. For example:<ul>
+<li>One firm-level dataset and one firm-year dataset. </li>
+<li>One county dataset and one state dataset.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>If you have distinct keys in your dataset, and all variables apply to the unit of the key, your dataset is said to be <em>"normalized"</em>. Storing normalized data means your data will be easier to understand and it will be harder to make costly mistakes. (See the example below)</p>
+<p>I doubt you will ever run a serious regression or analysis on completely normalized data. So at some point you will combine the datasets. Do your best to delay that (<strong>4.B</strong>).</p>
+<h3 id="Example:-Bad-and-Good-Data">Example: Bad and Good Data<a class="anchor-link" href="#Example:-Bad-and-Good-Data"> </a></h3><p>So, as a trivial example, here is a bad firm-year dataset:</p>
+<table>
+<thead><tr>
+<th style="text-align:left">Firm</th>
+<th style="text-align:left">Year</th>
+<th style="text-align:left">Profits</th>
+<th style="text-align:left">First_year</th>
+<th style="text-align:left">IndustryDef</th>
+<th style="text-align:left">SubIndustryDef</th>
+<th style="text-align:left">Profits_Ind</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">GM</td>
+<td style="text-align:left">2000</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">1908</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1A</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">GM</td>
+<td style="text-align:left">2001</td>
+<td style="text-align:left">5.5</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1A</td>
+<td style="text-align:left">13</td>
+</tr>
+<tr>
+<td style="text-align:left">Ford</td>
+<td style="text-align:left">2000</td>
+<td style="text-align:left">-4</td>
+<td style="text-align:left">1903</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">1A</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">Ford</td>
+<td style="text-align:left">2001</td>
+<td style="text-align:left">7.5</td>
+<td style="text-align:left">1903</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">1A</td>
+<td style="text-align:left">13</td>
+</tr>
+<tr>
+<td style="text-align:left">Ford</td>
+<td style="text-align:left">2002</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">1903</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">1A</td>
+<td style="text-align:left">23</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">2002</td>
+<td style="text-align:left">15</td>
+<td style="text-align:left">1903</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">1A</td>
+<td style="text-align:left">23</td>
+</tr>
+</tbody>
+</table>
+<p>What a mess! What is the last observation about? How is GM missing a "first year" in one observation? GM and Ford are in the same sub-industry, but different industries? You'll have to keep track of what <code>Profits</code> and <code>Profits_Ind</code> mean. (And which industry level are profits at?)</p>
+<p>The main issue is that this dataset conflates firm-year variables (profits in a given year) with firm-level variables (the first year of the firm. You can fix this by keeping three datasets, one firm-year dataset:</p>
+<table>
+<thead><tr>
+<th style="text-align:left">Firm</th>
+<th style="text-align:left">Year</th>
+<th style="text-align:left">Profits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">GM</td>
+<td style="text-align:left">2000</td>
+<td style="text-align:left">5</td>
+</tr>
+<tr>
+<td style="text-align:left">GM</td>
+<td style="text-align:left">2001</td>
+<td style="text-align:left">5.5</td>
+</tr>
+<tr>
+<td style="text-align:left">Ford</td>
+<td style="text-align:left">2000</td>
+<td style="text-align:left">-4</td>
+</tr>
+<tr>
+<td style="text-align:left">Ford</td>
+<td style="text-align:left">2001</td>
+<td style="text-align:left">7.5</td>
+</tr>
+<tr>
+<td style="text-align:left">Ford</td>
+<td style="text-align:left">2002</td>
+<td style="text-align:left">8</td>
+</tr>
+</tbody>
+</table>
+<p>... and a firm-level dataset:</p>
+<table>
+<thead><tr>
+<th style="text-align:left">Firm</th>
+<th style="text-align:left">First_year</th>
+<th style="text-align:left">IndustryDef</th>
+<th style="text-align:left">SubIndustryDef</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">GM</td>
+<td style="text-align:left">1908</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1A</td>
+</tr>
+<tr>
+<td style="text-align:left">Ford</td>
+<td style="text-align:left">1903</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1A</td>
+</tr>
+</tbody>
+</table>
+<p>... and an industry-year dataset:</p>
+<table>
+<thead><tr>
+<th style="text-align:left">IndustryDef</th>
+<th style="text-align:left">Year</th>
+<th style="text-align:left">Profits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">2000</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">2001</td>
+<td style="text-align:left">13</td>
+</tr>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">2002</td>
+<td style="text-align:left">23</td>
+</tr>
+</tbody>
+</table>
+<p>Now, the physical structure of each dataset communicates its logical structure: Every firm-year has a profit level, and each firm has a founding year. <strong>In fact, these databases are self-documenting! (Rule 6.C) Isn't that nice!?</strong></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Abstraction">Abstraction<a class="anchor-link" href="#Abstraction"> </a></h3><p>The last lecture already introduced two of the golden rules:</p>
+<blockquote><p>Writing your own functions is important for improving the clarity of your code because it</p>
+<ul>
+<li>separates different strands of logic (<strong>Rule 5.B</strong>)</li>
+<li>allows you to reuse code (<strong>Rule 5.A</strong>)</li>
+<li>prevents copy/paste errors (<strong>Rule 5.A</strong>)</li>
+</ul>
+</blockquote>
+<p>The <a href="https://web.stanford.edu/~gentzkow/research/CodeAndData.xhtml#magicparlabel-1085">"Code and Data" reference</a> has a short but very nice illustration justifying and explaining those rules. Do yourself a favor and read it!</p>
+<p>A few more points:</p>
+<ul>
+<li>Don't abstract for the sake of it! It can be a time-consuming waste of time that eats up time. (Lots of redundancy in that sentence.)</li>
+<li><strong>Rule 5.D:</strong> If you are going to reuse your code, write a "unit test", which is a script that tests out the behavior of the function you've written to make sure it works as intended. It should run your function with a few different inputs, possibly inputs with deliberate errors, test the function's output against <em><strong>answer you know in advance are correct</strong></em>. Using "toy" or "small" datasets is essential to developing functions and code more broadly.<ul>
+<li>Corollary: Don't unit test for the sake of it. You don't need to check what <code>round_a_number()</code> does when you use a string as input. </li>
+</ul>
+</li>
+</ul>
+<h3 id="Documentation">Documentation<a class="anchor-link" href="#Documentation"> </a></h3><p>This is maybe ok, but probably bad:</p>
+
+<pre><code># Elasticity = Percent Change in Quantity / Percent Change in Price
+# Elasticity = 0.4 / 0.2 = 2
+# See Shapiro (2005), The Economics of Potato Chips,
+# Harvard University Mimeo, Table 2A.
+compute_welfare_loss(elasticity=2)</code></pre>
+<p><strong>The problem with comments is that if you change the code, you don't have to change the comments and the code will still run.</strong> E.g., if you change <code>elasticity=2</code> above, you might easily forget to change the comment associated with it, or explain why.</p>
+<p>So using comments makes it possible that your code becomes internally inconsistent! The next example prevents that, yet still documents the code just as well because it is <strong>self-documenting</strong>:</p>
+
+<pre><code># See Shapiro (2005), The Economics of Potato Chips,
+# Harvard University Mimeo, Table 2A.
+percent_change_in_quantity = -0.4
+percent_change_in_price = 0.2
+elasticity = percent_change_in_quantity/percent_change_in_price</code></pre>
+<p>Related points:</p>
+<ul>
+<li>Use the naming of variables and the structure of the code to help guide a reader through your operations</li>
+<li><code>x</code> and <code>y</code> are usually (but not always!) bad variable names because they are uninformative</li>
+<li>The aim for self-documentation underlies the logic behind the "Good Data" section, the "Directory" rules, how we name files, ...</li>
+<li>Documentation is sometimes necessary and unavoidable. (Linking to "The Economics of Potato Chips" from the is excessive, the name suffices.)</li>
+<li>Documentation can clarify that, yes, I <em>did mean to do this on purpose</em></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Picking-up-the-pieces">Picking up the pieces<a class="anchor-link" href="#Picking-up-the-pieces"> </a></h2><ol>
+<li>Answer survey questions / additional practice</li>
+<li>GitHub Desktop tutorial?</li>
+<li>If needed, cover materials from last class we didn't have time for</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Before-next-class">Before next class<a class="anchor-link" href="#Before-next-class"> </a></h2><ol>
+<li>No explicit participation file today. </li>
+<li>The assignment is due Monday!</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Credits">Credits<a class="anchor-link" href="#Credits"> </a></h2><p>This lecture leans heavily on the wonderful <a href="https://web.stanford.edu/~gentzkow/research/CodeAndData.xhtml#magicparlabel-39">Code and Data for the Social Sciences: A Practitioner's Guide</a> by  Matthew Gentzkow and Jesse M. Shapiro1.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
