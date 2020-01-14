@@ -13,7 +13,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: code data dataset rule firm py year project analysis b rules files gm dont run level bad change c keys unit variables functions documentation build should inputs ford golden not example sample file txt different database structure key profits class just its test good folder output input directories normalized self county elasticity ive those because our directory comments gentzkow research here problem whose last also point cleandata function abstract documenting apply table observation state help better issues want click section social very cant version tests errors didnt same figure lecture web stanford edu codeanddata xhtml magicparlabel entire whole university answer
+search: code data dataset rule firm py year project analysis rules b files gm bad dont run level change documentation c keys unit variables golden functions sample build should inputs ford not example file txt different database structure key profits class want just its test our good last folder output input directories normalized self county elasticity ive those because directory errors comments lecture gentzkow research here problem whose also point try cleandata function abstract documenting apply table observation state help better issues click section social very cant version tests didnt same figure web stanford edu codeanddata xhtml magicparlabel entire whole university
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -38,7 +38,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <p>.</p>
 <p>It turns out that the issues I allude to above are not unique to me. Economists, financiers, social scientists, and researchers that are trained outside of software engineering or computer science are often (especially early on in careers) unaware of solutions those fields solved for problems that social scientists are only now (at least to them) just facing. It's very common, for example:</p>
 <ul>
-<li>You can't replicate an early version of analysis because it alls functions that have been moved.</li>
+<li>You can't replicate an early version of analysis because it calls functions that have been moved.</li>
 <li>You want to change your sample for tests #4-#12 (in an analysis with 15 test), but the code that defines the sample has been copied and pasted throughout our project directory, and making the change requires updating dozens of files. Turns out, there were copy and paste errors, so those tests didn't even use the same sample!</li>
 <li>You return to a project after weeks (or months...) (or years...) away. Despite all the documentation and comments you left behind, it takes days just to figure out how to run the analysis again.</li>
 </ul>
@@ -190,7 +190,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <p>.</p>
 <p>The build folder takes "inputs", which are processed by files inside "code", and places the analysis sample (now explicitly created!) in "output". Notice the inputs and outputs are clearly separated! (<strong>Rule 3.B</strong>) Temp files are created along the way, but are not "output".</p>
 <p><img src="img/dir-build.png" alt=""></p>
-<p><strong>Also, notice the new file <code>run_directory.py</code>.</strong> It very quickly and plainly documents how to run the entire code in the "build" project (<strong>Rule 1.B</strong>), and makes it ease to do so every time (<strong>Rule 2.B</strong>) before you push it back to the master repo on GitHub (<strong>Rule 2.A</strong>). <code>run_directory.py</code> is so simple, it is self-documenting (<strong>Rule 6.C</strong>).</p>
+<p><strong>Also, notice the new file <code>run_directory.py</code>.</strong> It very quickly and plainly documents how to run the entire code in the "build" project (<strong>Rule 1.B</strong>), and makes it easy to do so every time (<strong>Rule 2.B</strong>) before you push it back to the master repo on GitHub (<strong>Rule 2.A</strong>). <code>run_directory.py</code> is so simple, it is self-documenting (<strong>Rule 6.C</strong>).</p>
 
 <pre><code># to create DataSample.csv:
 clean_slate() # deletes all temp files and all output files
@@ -452,10 +452,15 @@ elasticity = percent_change_in_quantity/percent_change_in_price</code></pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Picking-up-the-pieces">Picking up the pieces<a class="anchor-link" href="#Picking-up-the-pieces"> </a></h2><ol>
+<h2 id="With-our-remaining-time-today...">With our remaining time today...<a class="anchor-link" href="#With-our-remaining-time-today..."> </a></h2><ol>
 <li>Answer survey questions / additional practice</li>
 <li>GitHub Desktop tutorial?</li>
 <li>If needed, cover materials from last class we didn't have time for</li>
+<li>Try, <strong>ERROR</strong>, share: <ul>
+<li>You have X minutes to create a sample python code with documentation, but purposely break a few golden rules in your code. Your code can be for any purpose you want: It can do tasks on lists and/or strings (a la last lecture), load a dataset and do a series of operations on the dataset, or anything you want!</li>
+<li>Share your code with your partner (probably fastest via email or switching computers) and try to identify the errors and bad habits in their code.</li>
+</ul>
+</li>
 </ol>
 
 </div>
@@ -481,7 +486,10 @@ elasticity = percent_change_in_quantity/percent_change_in_price</code></pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Credits">Credits<a class="anchor-link" href="#Credits"> </a></h2><p>This lecture leans heavily on the wonderful <a href="https://web.stanford.edu/~gentzkow/research/CodeAndData.xhtml#magicparlabel-39">Code and Data for the Social Sciences: A Practitioner's Guide</a> by  Matthew Gentzkow and Jesse M. Shapiro1.</p>
+<h2 id="Credits">Credits<a class="anchor-link" href="#Credits"> </a></h2><ul>
+<li>This lecture leans heavily on the wonderful <a href="https://web.stanford.edu/~gentzkow/research/CodeAndData.xhtml#magicparlabel-39">Code and Data for the Social Sciences: A Practitioner's Guide</a> by  Matthew Gentzkow and Jesse M. Shapiro1.</li>
+<li>The TA (Daniel Appierto) came up with "Try, error, share"</li>
+</ul>
 
 </div>
 </div>

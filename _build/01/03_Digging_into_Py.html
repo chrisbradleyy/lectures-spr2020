@@ -13,7 +13,7 @@ prev_page:
 next_page:
   url: /01/04_Golden_Rules.html
 suffix: .ipynb
-search: code python object print jupyter github not class function com above list returns into media giphy open data example want true line block spyder file through jakevdp point whirlwindtourofpython built called ipynb functions objects set lines condition markdown debugging might should run false statements org arguments note state states issue repo must read notebook here any method sns after next element capitol packages gif me computer participation files learn try large much e inputs logic right need variables nbviewer blob master syntax lists program just loop dont help youve let name before semester practice whirlwind execute cheat html games via
+search: python code object print jupyter github not com class function above list returns into media giphy open data example want true line block spyder file through jakevdp point markdown whirlwindtourofpython built called ipynb functions objects set lines condition debugging might should any run false statements org arguments note state states issue repo learn must read notebook here method lists sns after next element capitol packages gif me computer participation files try large much e inputs logic check right need variables nbviewer blob master syntax program just loop dont help youve let name before semester whirlwind execute cheat html games via
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -39,7 +39,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="First-things-first">First things first<a class="anchor-link" href="#First-things-first"> </a></h2><ol>
 <li>The assignment was posted. If you haven't received an email, please let me or the TA know immediately by tagging us in a GitHub issue. </li>
-<li><strong>Open a folder on your computer with your participation files, open Jupyter to that location, and create a new python file. Name it "Class 2 live coding".</strong><ul>
+<li><strong>Open a folder on your computer with your participation files, open Jupyter to that location, and create a new python file. Name it "Class 3 live coding".</strong><ul>
 <li>Going forward, have Jupyter opened to your participation repo before the start of every class. This is an interactive class, and will be all semester!</li>
 </ul>
 </li>
@@ -69,7 +69,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Reminders">Reminders<a class="anchor-link" href="#Reminders"> </a></h2><p>You can't learn programmatic material in class, try though I might to make it possible. You can only learn through practice  practice. You should be checking out tutorials and lessons online in your free time. My "best" suggestion would be:</p>
+<h2 id="Reminders">Reminders<a class="anchor-link" href="#Reminders"> </a></h2><p>You can't learn programmatic material in class, try though I might to make it possible. You can only learn through  practice. You should be checking out tutorials and lessons online in your free time. My "best" suggestion would be:</p>
 <ul>
 <li><strong>Absolute must do: Go through #3 to #14 of <a href="https://github.com/jakevdp/WhirlwindTourOfPython">A Whirlwind Tour of Python</a>.</strong> These are short (read--&gt;fast) but clear and comprehensive and will introduce you to virtually all of the key components of coding we will do this semester. </li>
 <li>As you go through that, have one large python notebook open, and simultaneously write and execute code as the book discusses it. <ul>
@@ -78,7 +78,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 </ul>
 </li>
 <li>Prefer to learn through games? That's how I learned python! (I built solvers for Sudoku and the Cracker Barrel golf tee game... Both taught me a LOT about programming in python, problem solving strategies, and data structures.) Some simpler games:<ul>
-<li><a href="https://edabit.com/">Edabit</a> has a bunch of games. If you log in, you can search for python challenges that take from 1 minute to ... longer... For example, <a href="https://edabit.com/challenge/cx7eFvQBzjauLgwgZ">the Museum of Dull Things</a>. If you find an games illuminating, please let me know via the class discussions repo!</li>
+<li><a href="https://edabit.com/">Edabit</a> has a bunch of games. If you log in, you can search for python challenges that take from 1 minute to ... longer... For example, <a href="https://edabit.com/challenge/cx7eFvQBzjauLgwgZ">the Museum of Dull Things</a>. If you find any games illuminating, please let me know via the class discussions repo!</li>
 </ul>
 </li>
 </ul>
@@ -210,7 +210,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span>        <span class="c1"># if both sides of *and* are true, the whole thing is</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">or</span> <span class="n">b</span><span class="p">)</span>         <span class="c1"># if either side of *or* is true, the whole thing is</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">b</span><span class="p">)</span>    <span class="c1"># *not* negates what is after it</span>
-<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">a</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># not a is true, so the whole thing is true</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">a</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># &quot;not b&quot; is true, so the whole thing is true</span>
 </pre></div>
 
     </div>
@@ -314,7 +314,6 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <span class="nb">print</span><span class="p">((</span><span class="mi">3</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="c1"># 1 is not greater than 2, so this evaluates to... </span>
 <span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="o">&gt;</span><span class="mi">3</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>   
-<span class="nb">print</span><span class="p">((</span><span class="mi">3</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">((</span><span class="mi">3</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
@@ -489,7 +488,7 @@ False
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Built-in-data-structures">Built in data structures<a class="anchor-link" href="#Built-in-data-structures"> </a></h3><p>Python has <code>list</code>, <code>tuple</code>, <code>dict</code>, and <code>set</code>. Beginners typically rely on lists extensively, but as you progress, you fill find that all four are extremely useful, because their unique traits solve different needs.</p>
+<h3 id="Built-in-data-structures">Built in data structures<a class="anchor-link" href="#Built-in-data-structures"> </a></h3><p>Python has <code>list</code>, <code>tuple</code>, <code>dict</code>, and <code>set</code>. Beginners typically rely on lists extensively, but as you progress, you will find that all four are extremely useful, because their unique traits solve different needs.</p>
 <p><a href="https://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/06-Built-in-Data-Structures.ipynb">After class, you should absolutely read this</a> and as you do, try the examples, and throw them into your growing personal cheat sheet.</p>
 <p>First, let me illustrate the use of <code>.extend()</code> vs <code>.append()</code> vs <code>+</code> for strings:</p>
 
@@ -550,7 +549,7 @@ False
 <li>Returns the largest element.</li>
 <li>Returns the smallest element.</li>
 <li>Returns the total of the vector.</li>
-<li>Returns the first element.</li>
+<li>Returns the first element. See <a href="https://stackoverflow.com/questions/509211/understanding-slice-notation?rq=1">this awesome answer</a> to learn about "slicing" lists in Python</li>
 <li>Returns the last element.</li>
 <li>Returns the first 2 elements.</li>
 <li>Returns the last 2 elements.</li>
@@ -1295,7 +1294,7 @@ If you have a dataset in Jupyter you want to open in Spyder, you can either save
 <h2 id="Are-you-still-stuck?">Are you still stuck?<a class="anchor-link" href="#Are-you-still-stuck?"> </a></h2><p>It'll happen! We will try to build some ambitious code this semester! (Imagine trying to replicate the "simple program" we saw last class in Excel!) Coding complicated analysis is iterative and debugging can be <a href="https://media.giphy.com/media/92S5gReZGnDgY/giphy.gif">as tough as having your IT firm audited</a>.</p>
 <p>So if you've tried the above, what can you do?</p>
 <ul>
-<li>Writing smart code will save us from getting into intractible problems. More on that next class. </li>
+<li>Writing smart code will save us from getting into intractable problems. More on that next class. </li>
 <li>Again, see the <a href="https://ledatascifi.github.io/studentresourcevert/resource-landing.html">resources tab of our website!</a> It's got some good pointers, along with a 15 minute rule: <strong>Once you’ve spent 15 minutes attempting to troubleshoot a problem, you must ask for help!</strong></li>
 <li>Finally, the resources tab also suggests that clearing your head and <a href="https://media.giphy.com/media/h6cFYO8miNhok/giphy.gif">getting a mental break might be a good idea</a>.</li>
 </ul>
@@ -1309,7 +1308,7 @@ If you have a dataset in Jupyter you want to open in Spyder, you can either save
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Authoring">Authoring<a class="anchor-link" href="#Authoring"> </a></h2><p>The whole point of data analysis is to communicate. You know the saying, if a "Naive Bayes Classification" falls in a forest and no one is around to hear it...</p>
+<h2 id="Authoring---Spell-check-and-Markdown-formatting">Authoring - Spell check and Markdown formatting<a class="anchor-link" href="#Authoring---Spell-check-and-Markdown-formatting"> </a></h2><p>The whole point of data analysis is to communicate. You know the saying, if a "Naive Bayes Classification" falls in a forest and no one is around to hear it...</p>
 <p>In this class, the Jupyter notebook files are the output we're aiming for. No need to try to reformat for printing, no Word, no LaTeX. Just these notebooks. They weave data and narrative text into reproducible output. That's the goal! The main issue is that there is a lack of built-in spell checks or grammar checks. See the popout to the right for my current spell checker solution. If you find a better option, please let me know!</p>
 
 </div>
