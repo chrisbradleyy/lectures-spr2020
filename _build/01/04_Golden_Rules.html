@@ -13,7 +13,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: code data dataset rule firm py year bad b project dont analysis files rules gm run variables level want functions change documentation br inputs c keys unit golden example sample build should ford not its good file txt different database structure key profits class just very test our directory errors didnt comments problem last folder also output try input directories normalized self simple county elasticity ive section those because lecture gentzkow research here whose practice needed point cleandata get python before writing into function classes abstract documenting apply table observation state share help better issues program check click social often
+search: code data dataset rule firm py year bad b project dont analysis files rules gm run variables level want functions change documentation inputs c keys unit golden example sample build should ford not its good file txt different database structure key profits class just very test our directory errors didnt comments problem last folder also output try input directories normalized self simple county elasticity ive section those because lecture gentzkow research here whose practice needed point cleandata get python before writing into function classes abstract documenting apply table observation state share help better issues program check click social often early
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -116,82 +116,29 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <tbody>
 <tr>
 <td style="text-align:left">0. <strong>PLAN BEFORE YOU CODE</strong></td>
-<td style="text-align:left">A. "Pseudo code" is writing out the broad steps in plain language. <br> I often (almost always for complicated tasks) do this on paper, <br> then translate it to code as an outline (in the code's comments). <br> <br> Maybe planning sounds boring and like a redundant waste of time. <br> I get it - I also want to <a href="https://youtu.be/la7uuFsCIrg?t=43">shoot first</a> like <a href="https://youtu.be/93pXrmCdlI0?t=26">Han...</a> <br><br> ...but coders like Han often <a href="https://youtu.be/mLyOj_QD4a4?t=67">end up looking like this guy</a>...</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">B. Break the problem into chunks/smaller <br>problems. This dovetails with rule 5.B below nicely.</td>
-</tr>
-<tr>
-<td style="text-align:left">1. Automation</td>
-<td style="text-align:left">A. Automate everything that can be automated, don't do point-and-click analysis!</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">B. Write a single script that executes all code from beginning to end</td>
-</tr>
-<tr>
-<td style="text-align:left">2. Version control</td>
-<td style="text-align:left">A. Store code and data under version control. Revisit the <br> <a href="01_Motivation_and_Getting_Started.html#***-THE-WORKFLOW-RECIPE--***">GitHub workflow recipe</a> as needed!</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">B. <strong>Before checking the directory back in, clear all outputs and</strong> <br> <strong>temp files and then run the whole directory!</strong> (Check: Did it work right?) <br></td>
-</tr>
-<tr>
-<td style="text-align:left">3.  Directories</td>
-<td style="text-align:left">A. Separate directories by function</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">B. Separate files into inputs and outputs</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">C. Make directories portable</td>
-</tr>
-<tr>
-<td style="text-align:left">4. Keys / Units</td>
-<td style="text-align:left">A. Store cleaned data in tables with unique, non-missing "keys"</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">B. Keep data normalized as far into your code pipeline as you can</td>
-</tr>
-<tr>
-<td style="text-align:left">5. Abstraction - fncs/classes</td>
-<td style="text-align:left">A. Abstract to eliminate redundancy</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">B. Abstract to improve clarity</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">C. Otherwise, don't abstract</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">D. <strong>Unit test your functions!</strong></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">E. Don't use magic numbers, define once as variables and refer as needed</td>
-</tr>
-<tr>
-<td style="text-align:left">6. Documentation</td>
-<td style="text-align:left">A. Is good... to a point</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">B. Don't write documentation you will not maintain</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">C. Code is better off when it is self-documenting</td>
+<td style="text-align:left">A. </td>
 </tr>
 </tbody>
 </table>
+<p>"Pseudo code" is writing out the broad steps in plain language. I often (almost always for complicated tasks) do this on paper, then translate it to code as an outline (in the code's comments). <br> <br> Maybe planning sounds boring and like a waste of time. I get it; I also want to <a href="https://youtu.be/la7uuFsCIrg?t=43">shoot first</a> like <a href="https://youtu.be/93pXrmCdlI0?t=26">Han did...</a>  but coders like Han often <a href="https://youtu.be/mLyOj_QD4a4?t=67">end up looking like this guy</a>... |
+| | B. Break the problem into chunks/smaller <br>problems. This dovetails with rule 5.B below nicely. |
+| 1. Automation | A. Automate everything that can be automated, don't do point-and-click analysis! |
+| | B. Write a single script that executes all code from beginning to end |
+| 2. Version control | A. Store code and data under version control. Revisit the <a href="01_Motivation_and_Getting_Started.html#***-THE-WORKFLOW-RECIPE--***">GitHub workflow recipe</a> as needed! |
+| | B. <strong>Before checking the directory back in, clear all outputs and temp files and then run the whole directory!</strong> (Check: Did it work right?) <br>  |
+| 3.  Directories | A. Separate directories by function |
+| | B. Separate files into inputs and outputs |
+| | C. Make directories portable |
+| 4. Keys / Units | A. Store cleaned data in tables with unique, non-missing "keys" |
+| | B. Keep data normalized as far into your code pipeline as you can |
+| 5. Abstraction - fncs/classes | A. Abstract to eliminate redundancy |
+| | B. Abstract to improve clarity |
+| | C. Otherwise, don't abstract |
+| | D. <strong>Unit test your functions!</strong> |
+| | E. Don't use magic numbers, define once as variables and refer as needed |
+| 6. Documentation | A. Is good... to a point |
+| | B. Don't write documentation you will not maintain |
+| | C. Code is better off when it is self-documenting |</p>
 <h3 id="The-effect-of-the-golden-rules">The effect of the golden rules<a class="anchor-link" href="#The-effect-of-the-golden-rules"> </a></h3><p>Let's apply those rules to our cursed analysis of character death in Game of Thrones and see if this makes the project easier to replicate (in terms of accuracy and time required).</p>
 <p><em>(Note, there are other ways to efficiently divide up analysis than what I propose here that have merit! Do not take this <strong>exact</strong> scheme as "gospel".)</em></p>
 <p>I’ve split the project into two sub-directories: "build" (whose function is to build the sample from the raw data inputs) and "analysis". These are two-sub tasks of any data project, and here, I've chosen to treat them as different functions and thus they get different folders (<strong>Rule 3.A</strong>).</p>
