@@ -13,7 +13,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: code data dataset rule firm py year project analysis rules b files gm bad dont run level change documentation c keys unit variables golden functions sample build should inputs ford not example file txt different database structure key profits class want just its test our good last folder output input directories normalized self county elasticity ive those because directory errors comments lecture gentzkow research here problem whose also point try cleandata function abstract documenting apply table observation state help better issues click section social very cant version tests didnt same figure web stanford edu codeanddata xhtml magicparlabel entire whole university
+search: code data dataset rule firm py year bad b project dont analysis files rules gm run variables level want functions change documentation br inputs c keys unit golden example sample build should ford not its good file txt different database structure key profits class just very test our directory errors didnt comments problem last folder also output try input directories normalized self simple county elasticity ive section those because lecture gentzkow research here whose practice needed point cleandata get python before writing into function classes abstract documenting apply table observation state share help better issues program check click social often
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -107,13 +107,21 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Golden-Rules">Golden Rules<a class="anchor-link" href="#Golden-Rules"> </a></h2><table>
+<h2 id="THE-GOLDEN-RULES">THE GOLDEN RULES<a class="anchor-link" href="#THE-GOLDEN-RULES"> </a></h2><table>
 <thead><tr>
 <th style="text-align:left"><strong>Category</strong></th>
 <th style="text-align:left"><strong>Rule</strong></th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left">0. <strong>PLAN BEFORE YOU CODE</strong></td>
+<td style="text-align:left">A. "Pseudo code" is writing out the broad steps in plain language. <br> I often (almost always for complicated tasks) do this on paper, <br> then translate it to code as an outline (in the code's comments). <br> <br> Maybe planning sounds boring and like a redundant waste of time. <br> I get it - I also want to <a href="https://youtu.be/la7uuFsCIrg?t=43">shoot first</a> like <a href="https://youtu.be/93pXrmCdlI0?t=26">Han...</a> <br><br> ...but coders like Han often <a href="https://youtu.be/mLyOj_QD4a4?t=67">end up looking like this guy</a>...</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">B. Break the problem into chunks/smaller <br>problems. This dovetails with rule 5.B below nicely.</td>
+</tr>
 <tr>
 <td style="text-align:left">1. Automation</td>
 <td style="text-align:left">A. Automate everything that can be automated, don't do point-and-click analysis!</td>
@@ -124,11 +132,11 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 </tr>
 <tr>
 <td style="text-align:left">2. Version control</td>
-<td style="text-align:left">A. Store code and data under version control</td>
+<td style="text-align:left">A. Store code and data under version control. Revisit the <br> <a href="01_Motivation_and_Getting_Started.html#***-THE-WORKFLOW-RECIPE--***">GitHub workflow recipe</a> as needed!</td>
 </tr>
 <tr>
 <td style="text-align:left"></td>
-<td style="text-align:left">B. <strong>Run the whole directory before checking it back in!</strong></td>
+<td style="text-align:left">B. <strong>Before checking the directory back in, clear all outputs and</strong> <br> <strong>temp files and then run the whole directory!</strong> (Check: Did it work right?) <br></td>
 </tr>
 <tr>
 <td style="text-align:left">3.  Directories</td>
@@ -151,7 +159,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <td style="text-align:left">B. Keep data normalized as far into your code pipeline as you can</td>
 </tr>
 <tr>
-<td style="text-align:left">5. Abstraction/functions</td>
+<td style="text-align:left">5. Abstraction - fncs/classes</td>
 <td style="text-align:left">A. Abstract to eliminate redundancy</td>
 </tr>
 <tr>
@@ -165,6 +173,10 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <tr>
 <td style="text-align:left"></td>
 <td style="text-align:left">D. <strong>Unit test your functions!</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">E. Don't use magic numbers, define once as variables and refer as needed</td>
 </tr>
 <tr>
 <td style="text-align:left">6. Documentation</td>
@@ -402,7 +414,7 @@ execfile(export_data.py)</code></pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Abstraction">Abstraction<a class="anchor-link" href="#Abstraction"> </a></h3><p>The last lecture already introduced two of the golden rules:</p>
+<h3 id="Abstraction---use-functions-or-classes">Abstraction - use functions or classes<a class="anchor-link" href="#Abstraction---use-functions-or-classes"> </a></h3><p>The last lecture already introduced two of the golden rules:</p>
 <blockquote><p>Writing your own functions is important for improving the clarity of your code because it</p>
 <ul>
 <li>separates different strands of logic (<strong>Rule 5.B</strong>)</li>
@@ -411,13 +423,16 @@ execfile(export_data.py)</code></pre>
 </ul>
 </blockquote>
 <p>The <a href="https://web.stanford.edu/~gentzkow/research/CodeAndData.xhtml#magicparlabel-1085">"Code and Data" reference</a> has a short but very nice illustration justifying and explaining those rules. Do yourself a favor and read it!</p>
+<p>I'll simple add that while a "wet jumpshot" is good in basketball, "wet code" is bad. You've Wasted Everyone's Time by Writing Everything Twice, which is bad even though We Enjoy Typing. Nah, you want your code to be DRY. It's very simple: Don't Repeat Yourself.</p>
 <p>A few more points:</p>
 <ul>
-<li>Don't abstract for the sake of it! It can be a time-consuming waste of time that eats up time. (Lots of redundancy in that sentence.)</li>
+<li>Don't abstract for the sake of it! Writing functions can be a time-consuming waste of time that eats up time. (Lots of redundancy in that sentence was a waste of time to the reader, but at least it was short. Similarly, bad code is less problematic when it is short.)</li>
+<li><strong>Rule 5.D:</strong> A magic number is a literal number embedded in your code. "Magic number" is a pejorative. Having numbers that act as in-line inputs and parameters can lead to errors and make modifying code very tough. For example, in <a href="python-files/02a-a-simple-program.html">a simple program</a>, I wrote <code>2006</code> and <code>['AAPL','MSFT','VZ']</code> several times throughout the code. This is bad practice!</li>
 <li><strong>Rule 5.D:</strong> If you are going to reuse your code, write a "unit test", which is a script that tests out the behavior of the function you've written to make sure it works as intended. It should run your function with a few different inputs, possibly inputs with deliberate errors, test the function's output against <em><strong>answer you know in advance are correct</strong></em>. Using "toy" or "small" datasets is essential to developing functions and code more broadly.<ul>
 <li>Corollary: Don't unit test for the sake of it. You don't need to check what <code>round_a_number()</code> does when you use a string as input. </li>
 </ul>
 </li>
+<li>I don't personally use classes much, if at all. It wasn't necessary or extremely beneficial for my early projects (or so I, uniformed!, thought), so I didn't use them and learn them. Then inertia took over... But defining your own classes can be extremely useful! If you want to use them when warranted during this semester, absolutely go for it. I recommend reading the Whirlwind of Python section as a starter. </li>
 </ul>
 <h3 id="Documentation">Documentation<a class="anchor-link" href="#Documentation"> </a></h3><p>This is maybe ok, but probably bad:</p>
 
@@ -475,6 +490,7 @@ elasticity = percent_change_in_quantity/percent_change_in_price</code></pre>
 <h2 id="Before-next-class">Before next class<a class="anchor-link" href="#Before-next-class"> </a></h2><ol>
 <li>No explicit participation file today. </li>
 <li>The assignment is due Monday!</li>
+<li>If we didn't get to "try, error, share", consider playing that as a 20 minute game with a friend over the weekend for some quick but valuable practice.</li>
 </ol>
 
 </div>

@@ -13,7 +13,7 @@ prev_page:
 next_page:
   url: /01/04_Golden_Rules.html
 suffix: .ipynb
-search: python code object print jupyter github not com class function above list returns into media giphy open data example want true line block spyder file through jakevdp point markdown whirlwindtourofpython built called ipynb functions objects set lines condition debugging might should any run false statements org arguments note state states issue repo learn must read notebook here method lists sns after next element capitol packages gif me computer participation files try large much e inputs logic check right need variables nbviewer blob master syntax program just loop dont help youve let name before semester whirlwind execute cheat html games via
+search: code python object print jupyter github not com class function want above list returns into media giphy open data example true line block spyder file through should jakevdp point markdown whirlwindtourofpython built called org ipynb functions objects set lines condition computer debugging might any run false statements bug method arguments note next state states issue coding repo learn must read notebook here need lists sns after element capitol help packages gif me participation files try large much e inputs logic check right variables nbviewer blob master syntax program because just loop dont even youve let name before semester whirlwind execute
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -1069,9 +1069,25 @@ f(x, a=1, b=1)
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Debugging">Debugging<a class="anchor-link" href="#Debugging"> </a></h2><h3 id="Read-the-error-codes!">Read the error codes!<a class="anchor-link" href="#Read-the-error-codes!"> </a></h3><p>Really, they tend to be informative! You can google them for more info, but even without Google, they often point directly at the issue and location.</p>
+<h2 id="Debugging">Debugging<a class="anchor-link" href="#Debugging"> </a></h2><p>Perhaps the most famous early case of a computer bug was reported by <a href="https://en.wikipedia.org/wiki/Grace_Hopper">Grace Hopper</a>, who was absolutely a computer science legend and pioneer, and certainly also a <a href="https://www.youtube.com/watch?v=6QIw1BQIvT4">bad mama jama</a>. You should definitely going down the wiki rabbit hole on Grace's life sometime.</p>
+<p><img src="img/bug.jpg" alt=""></p>
+<p>Computers are extremely powerful but incredibly stupid. We want to both</p>
+<ol>
+<li>Fix bugs when they happen</li>
+<li>Prevent them from happening!</li>
+</ol>
+<p>This section is mostly about the former. Good coding habits and defensive coding will help prevent them, and I cover those in the next lecture.</p>
+<p>So, to fix bugs, you need to</p>
+<ol>
+<li>Realize that you have a bug</li>
+<li>Figure out where it is</li>
+<li>Make it repeatable (and you'll understand the bug)</li>
+<li>Fix it (duh) and test it (the existence of the bug should disabuse you of your coding invincibility!)</li>
+</ol>
+<p><em><strong>Advice that could save (or cost) you thousands:</strong></em> Those steps are general, and work for other things besides code, like  plumbing and electrical work on your parent's house.</p>
+<h3 id="Read-the-error-codes!">Read the error codes!<a class="anchor-link" href="#Read-the-error-codes!"> </a></h3><p>Really, they tend to be informative! You can google them for more info, but even without Google, they often point directly at the issue <em>and</em> location.</p>
 <h3 id="%debug"><code>%debug</code><a class="anchor-link" href="#%debug"> </a></h3><p><a href="https://jakevdp.github.io/PythonDataScienceHandbook/01.06-errors-and-debugging.html#Debugging:-When-Reading-Tracebacks-Is-Not-Enough">Covered in nice detail here</a>.</p>
-<h3 id="Flipping-switches-/-divide-and-conquer">Flipping switches / divide and conquer<a class="anchor-link" href="#Flipping-switches-/-divide-and-conquer"> </a></h3><p>After slaving over your computer and a piece of paper (you smartly planned out your code before you went in head first), you've found a clever solution to your problem. Your code is beautiful and elegant, like this:</p>
+<h3 id="Flipping-switches-/-divide-and-conquer-/-or:-find-the-bug">Flipping switches / divide and conquer / or: find the bug<a class="anchor-link" href="#Flipping-switches-/-divide-and-conquer-/-or:-find-the-bug"> </a></h3><p>After slaving over your computer and a piece of paper (you smartly planned out your code before you went in head first), you've found a clever solution to your problem. Your code is beautiful and elegant, like this:</p>
 
 </div>
 </div>
@@ -1184,7 +1200,7 @@ He spends all day taking calls from people with computer problems, typically men
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>At least we know the issue isn't in the first two lines. We can proceed and look elsewhere.</p>
-<p>Luckily, python error statements tend to be informative enough. Above, we know the issue is in line 4. But in more sophisticated settings, where the lines above aren't <code>2+2</code> but chunks of code, and the error isn't simply due to syntax or namespace issues... that can work.</p>
+<p>Luckily, python error statements tend to be informative enough. Above, we know the issue is in line 4. But in more sophisticated settings, where the lines above aren't <code>2+2</code> but chunks of code, and the error isn't simply due to syntax or namespace issues... the on/off method can be useful. Why? Because many "errors" can exist even when the code executes.</p>
 <h3 id="Print-statements">Print statements<a class="anchor-link" href="#Print-statements"> </a></h3><p>Another ugly, possibly brutish method of debugging is: put print statements all over your code.</p>
 
 </div>
@@ -1371,7 +1387,7 @@ jupyter nbextension enable spellchecker/main</code></pre>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Credits">Credits<a class="anchor-link" href="#Credits"> </a></h2><p>To <a href="https://github.com/jakevdp/WhirlwindTourOfPython">Whirlwind Tour of Python</a>.</p>
+<h2 id="Credits">Credits<a class="anchor-link" href="#Credits"> </a></h2><p>To <a href="https://github.com/jakevdp/WhirlwindTourOfPython">Whirlwind Tour of Python</a> and <a href="https://cfss.uchicago.edu/">MACS 30500</a>.</p>
 
 </div>
 </div>
