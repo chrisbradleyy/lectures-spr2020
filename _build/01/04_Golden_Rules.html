@@ -13,7 +13,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: code data dataset rule firm py year bad b project dont analysis files rules gm run variables level want functions change documentation inputs c keys unit golden example sample build should ford not its good file txt different database structure key profits class just very test our directory errors didnt comments problem last folder also output try input directories normalized self simple county elasticity ive section those because lecture gentzkow research here whose practice needed point cleandata get python before writing into function classes abstract documenting apply table observation state share help better issues program check click social often early
+search: code data dataset rule firm py year bad b project dont analysis files rules gm run variables level want functions change documentation inputs c keys unit golden example sample build should ford not its good file txt different database structure key profits class just very test our directory errors didnt comments problem last folder also output try input directories normalized classes self simple county elasticity ive section those because lecture gentzkow research here whose practice needed point cleandata get python before writing into function abstract documenting apply table observation state share help better issues program check click social often early
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -427,12 +427,12 @@ execfile(export_data.py)</code></pre>
 <p>A few more points:</p>
 <ul>
 <li>Don't abstract for the sake of it! Writing functions can be a time-consuming waste of time that eats up time. (Lots of redundancy in that sentence was a waste of time to the reader, but at least it was short. Similarly, bad code is less problematic when it is short.)</li>
-<li><strong>Rule 5.D:</strong> A magic number is a literal number embedded in your code. "Magic number" is a pejorative. Having numbers that act as in-line inputs and parameters can lead to errors and make modifying code very tough. For example, in <a href="python-files/02a-a-simple-program.html">a simple program</a>, I wrote <code>2006</code> and <code>['AAPL','MSFT','VZ']</code> several times throughout the code. This is bad practice!</li>
+<li><strong>Rule 5.E:</strong> A magic number is a literal number embedded in your code. "Magic number" is a pejorative. Having numbers that act as in-line inputs and parameters can lead to errors and make modifying code very tough. For example, in <a href="python-files/02a-a-simple-program.html">a simple program</a>, I wrote <code>2006</code> and <code>['AAPL','MSFT','VZ']</code> several times throughout the code. This is bad practice!</li>
 <li><strong>Rule 5.D:</strong> If you are going to reuse your code, write a "unit test", which is a script that tests out the behavior of the function you've written to make sure it works as intended. It should run your function with a few different inputs, possibly inputs with deliberate errors, test the function's output against <em><strong>answer you know in advance are correct</strong></em>. Using "toy" or "small" datasets is essential to developing functions and code more broadly.<ul>
 <li>Corollary: Don't unit test for the sake of it. You don't need to check what <code>round_a_number()</code> does when you use a string as input. </li>
 </ul>
 </li>
-<li>I don't personally use classes much, if at all. It wasn't necessary or extremely beneficial for my early projects (or so I, uniformed!, thought), so I didn't use them and learn them. Then inertia took over... But defining your own classes can be extremely useful! If you want to use them when warranted during this semester, absolutely go for it. I recommend reading the Whirlwind of Python section as a starter. </li>
+<li><strong>On "classes":</strong> I don't personally use classes much, if at all. It wasn't necessary or extremely beneficial for my early projects (or so I, uniformed!, thought), so I didn't use them and learn them. Then inertia took over... But defining your own classes can be extremely useful! If you want to use them when warranted during this semester, absolutely go for it. I recommend reading the Whirlwind of Python section as a starter. </li>
 </ul>
 <h3 id="Documentation">Documentation<a class="anchor-link" href="#Documentation"> </a></h3><p>This is maybe ok, but probably bad:</p>
 
